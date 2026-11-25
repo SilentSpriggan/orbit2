@@ -1,0 +1,112 @@
+@import "tailwindcss";
+@import "../../ui/design-tokens.css";
+
+@theme {
+  /* Fonts */
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Shared light surfaces */
+  /* Neutral like the website's insets; --notice-tint is blue and reserved for notices. */
+  --color-sunken:  var(--paper);  /* status bar, wells, code blocks, chart plot area */
+  --color-canvas:  var(--paper);  /* app background */
+  --color-panel:   #ffffff;  /* cards, sidebar */
+  --color-raised:  var(--paper);  /* card headers, hovered rows, selected nav, inputs */
+  --color-overlay: #ffffff;  /* popovers, dialogs, menus, tooltips */
+
+  /* Lines */
+  --color-line:        var(--line);  /* 1px hairline: card borders, dividers */
+  --color-line-strong: var(--control-line);  /* emphasized dividers, table header rule */
+  --color-control:     #8b98a9;  /* input/select/checkbox borders (≥3:1) */
+
+  /* Text */
+  --color-ink:          var(--ink);  /* primary text, values */
+  --color-ink-2:        var(--muted);  /* secondary text, labels */
+  --color-ink-3:        var(--muted);  /* tertiary/meta — only on canvas, panel, raised, sunken */
+  --color-ink-disabled: #87909d;  /* disabled text only */
+
+  /* Accent (interactive, selection, focus) */
+  --color-accent:       var(--blue);
+  --color-accent-hover: var(--mission-blue-deep);
+  --color-accent-press: #164779;
+  --color-accent-tint:  var(--soft-blue);
+  --color-on-accent:    #ffffff;
+  --color-focus:        var(--blue);
+
+  /* Medical status — reserved for status meaning only */
+  --color-nominal:       var(--clear-text);
+  --color-nominal-tint:  var(--clear-tint);
+  --color-nominal-line:  #badacf;
+  --color-caution:       var(--review-text);
+  --color-caution-tint:  var(--review-tint);
+  --color-caution-line:  var(--review-line);
+  --color-critical:      var(--urgent-text);
+  --color-critical-tint: var(--urgent-tint);
+  --color-critical-line: var(--response-line);
+  --color-critical-solid:       var(--response-red);  /* destructive button fill, white text */
+  --color-critical-solid-hover: #87382f;
+  --color-standby:       var(--muted);
+  --color-standby-tint:  var(--notice-tint);
+  --color-standby-line:  var(--control-line);
+
+  /* Data series — charts only, never for status */
+  --color-series-1: #1f5fae;
+  --color-series-2: #46778b;
+  --color-series-3: #72628f;
+  --color-series-4: #a65c7d;
+  --color-series-5: #587740;
+
+  /* Type scale */
+  --text-2xs: 11px;  --text-2xs--line-height: 16px;
+  --text-xs:  12px;  --text-xs--line-height: 16px;
+  --text-sm:  13px;  --text-sm--line-height: 20px;
+  --text-base: 14px; --text-base--line-height: 20px;
+  --text-md:  16px;  --text-md--line-height: 24px;
+  --text-lg:  20px;  --text-lg--line-height: 28px;
+  --text-xl:  24px;  --text-xl--line-height: 32px;
+  --text-2xl: 32px;  --text-2xl--line-height: 40px;
+
+  /* Radii */
+  --radius-sm: 6px;   /* badges, chips, small inputs, checkboxes */
+  --radius-md: 8px;   /* buttons, inputs, selects, tabs */
+  --radius-lg: 8px;   /* cards, tiles, table containers */
+  --radius-xl: 12px;  /* dialogs, popovers, large panels */
+
+  /* Spacing base (Tailwind multiplies this) */
+  --spacing: 4px;
+
+  /* Elevation — overlays only; cards use borders, not shadows */
+  --shadow-overlay: 0 12px 32px rgb(18 28 43 / 0.12), 0 0 0 1px var(--line);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+html { color-scheme: light; }
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 20px;
+  font-feature-settings: "tnum" 1, "cv11" 1;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; border-radius: 4px; }
+::selection { background: var(--soft-blue); color: var(--color-ink); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Single 1.2s opacity pulse for a newly raised critical badge (section F). */
+@keyframes orbit-critical-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@utility animate-critical-pulse {
+  animation: orbit-critical-pulse 1.2s var(--ease-standard) 1;
+}
+
+/* Buttons and headings use title case, matching the main website. */
+h1, h2, h3, h4, h5, h6, button, summary, [role="tab"], legend { text-transform: capitalize; }
+:is(button, summary, [role="tab"]) :is(small, p) { text-transform: none; }

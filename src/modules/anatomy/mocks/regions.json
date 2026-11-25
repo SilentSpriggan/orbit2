@@ -1,0 +1,1468 @@
+{
+  "version": "2026.11.1",
+  "regions": [
+    {
+      "id": "skull",
+      "name": "Skull",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "cranium",
+        "head bones"
+      ],
+      "meshNames": [
+        "skull"
+      ],
+      "svgPathId": "svg-skull",
+      "side": "midline",
+      "description": "The bony case that protects the brain and supports the face."
+    },
+    {
+      "id": "spine",
+      "name": "Spine",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "vertebral column",
+        "backbone"
+      ],
+      "meshNames": [
+        "spine"
+      ],
+      "side": "midline",
+      "description": "The column of vertebrae from the neck to the pelvis. It supports the trunk and protects the spinal cord.",
+      "considerations": [
+        {
+          "text": "The spine lengthens in microgravity and back pain is commonly reported early in flight.",
+          "evidenceRef": {
+            "documentId": "doc_spine_microgravity",
+            "chunkId": "1190"
+          }
+        }
+      ]
+    },
+    {
+      "id": "spine_cervical",
+      "name": "Cervical spine",
+      "system": "skeletal",
+      "parentId": "spine",
+      "synonyms": [
+        "neck vertebrae",
+        "c-spine"
+      ],
+      "meshNames": [
+        "spine_cervical"
+      ],
+      "svgPathId": "svg-spine_cervical",
+      "side": "midline",
+      "description": "The seven vertebrae of the neck."
+    },
+    {
+      "id": "spine_thoracic",
+      "name": "Thoracic spine",
+      "system": "skeletal",
+      "parentId": "spine",
+      "synonyms": [
+        "upper back vertebrae",
+        "t-spine"
+      ],
+      "meshNames": [
+        "spine_thoracic"
+      ],
+      "svgPathId": "svg-spine_thoracic",
+      "side": "midline",
+      "description": "The twelve vertebrae of the upper and mid back, joined to the ribs."
+    },
+    {
+      "id": "spine_lumbar",
+      "name": "Lumbar spine",
+      "system": "skeletal",
+      "parentId": "spine",
+      "synonyms": [
+        "lower back vertebrae",
+        "l-spine"
+      ],
+      "meshNames": [
+        "spine_lumbar"
+      ],
+      "svgPathId": "svg-spine_lumbar",
+      "side": "midline",
+      "description": "The five large vertebrae of the lower back.",
+      "considerations": [
+        {
+          "text": "The spine lengthens in microgravity and back pain is commonly reported early in flight.",
+          "evidenceRef": {
+            "documentId": "doc_spine_microgravity",
+            "chunkId": "1190"
+          }
+        },
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ribcage",
+      "name": "Rib cage",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "ribs",
+        "thoracic cage"
+      ],
+      "meshNames": [
+        "ribcage"
+      ],
+      "svgPathId": "svg-ribcage",
+      "side": "midline",
+      "description": "Twelve pairs of ribs that protect the heart and lungs and move with breathing."
+    },
+    {
+      "id": "pelvis",
+      "name": "Pelvis",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "hip bones",
+        "pelvic girdle"
+      ],
+      "meshNames": [
+        "pelvis"
+      ],
+      "svgPathId": "svg-pelvis",
+      "side": "midline",
+      "description": "The ring of bones that joins the spine to the legs.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "clavicle_left",
+      "name": "Left clavicle",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left collarbone",
+        "collarbone"
+      ],
+      "meshNames": [
+        "clavicle_left"
+      ],
+      "svgPathId": "svg-clavicle_left",
+      "side": "left",
+      "description": "The collarbone, which links the arm to the trunk."
+    },
+    {
+      "id": "clavicle_right",
+      "name": "Right clavicle",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right collarbone",
+        "collarbone"
+      ],
+      "meshNames": [
+        "clavicle_right"
+      ],
+      "svgPathId": "svg-clavicle_right",
+      "side": "right",
+      "description": "The collarbone, which links the arm to the trunk."
+    },
+    {
+      "id": "humerus_left",
+      "name": "Left humerus",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left upper arm bone",
+        "upper arm bone"
+      ],
+      "meshNames": [
+        "humerus_left"
+      ],
+      "svgPathId": "svg-humerus_left",
+      "side": "left",
+      "description": "The long bone of the upper arm."
+    },
+    {
+      "id": "humerus_right",
+      "name": "Right humerus",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right upper arm bone",
+        "upper arm bone"
+      ],
+      "meshNames": [
+        "humerus_right"
+      ],
+      "svgPathId": "svg-humerus_right",
+      "side": "right",
+      "description": "The long bone of the upper arm."
+    },
+    {
+      "id": "femur_left",
+      "name": "Left femur",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left thigh bone",
+        "thigh bone"
+      ],
+      "meshNames": [
+        "femur_left"
+      ],
+      "svgPathId": "svg-femur_left",
+      "side": "left",
+      "description": "The thigh bone, the longest and strongest bone in the body.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "femur_right",
+      "name": "Right femur",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right thigh bone",
+        "thigh bone"
+      ],
+      "meshNames": [
+        "femur_right"
+      ],
+      "svgPathId": "svg-femur_right",
+      "side": "right",
+      "description": "The thigh bone, the longest and strongest bone in the body.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "knee_left",
+      "name": "Left knee",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left knee joint",
+        "knee joint"
+      ],
+      "meshNames": [
+        "knee_left"
+      ],
+      "svgPathId": "svg-knee_left",
+      "side": "left",
+      "description": "The hinge joint between the femur and tibia, with the patella in front.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        },
+        {
+          "text": "Exercise countermeasure hardware has been associated with strain and overuse injuries; record load, device and onset with each pin.",
+          "evidenceRef": {
+            "documentId": "doc_msk_injury_countermeasures",
+            "chunkId": "2207"
+          }
+        }
+      ]
+    },
+    {
+      "id": "knee_right",
+      "name": "Right knee",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right knee joint",
+        "knee joint"
+      ],
+      "meshNames": [
+        "knee_right"
+      ],
+      "svgPathId": "svg-knee_right",
+      "side": "right",
+      "description": "The hinge joint between the femur and tibia, with the patella in front.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        },
+        {
+          "text": "Exercise countermeasure hardware has been associated with strain and overuse injuries; record load, device and onset with each pin.",
+          "evidenceRef": {
+            "documentId": "doc_msk_injury_countermeasures",
+            "chunkId": "2207"
+          }
+        }
+      ]
+    },
+    {
+      "id": "patella_left",
+      "name": "Left patella",
+      "system": "skeletal",
+      "parentId": "knee_left",
+      "synonyms": [
+        "left kneecap",
+        "kneecap"
+      ],
+      "meshNames": [
+        "patella_left"
+      ],
+      "svgPathId": "svg-patella_left",
+      "side": "left",
+      "description": "The kneecap, a small bone inside the tendon at the front of the knee."
+    },
+    {
+      "id": "patella_right",
+      "name": "Right patella",
+      "system": "skeletal",
+      "parentId": "knee_right",
+      "synonyms": [
+        "right kneecap",
+        "kneecap"
+      ],
+      "meshNames": [
+        "patella_right"
+      ],
+      "svgPathId": "svg-patella_right",
+      "side": "right",
+      "description": "The kneecap, a small bone inside the tendon at the front of the knee."
+    },
+    {
+      "id": "tibia_left",
+      "name": "Left tibia",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left shin bone",
+        "shin bone",
+        "left shin",
+        "shin"
+      ],
+      "meshNames": [
+        "tibia_left"
+      ],
+      "svgPathId": "svg-tibia_left",
+      "side": "left",
+      "description": "The shin bone, which carries most of the body's weight below the knee.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tibia_right",
+      "name": "Right tibia",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right shin bone",
+        "shin bone",
+        "right shin",
+        "shin"
+      ],
+      "meshNames": [
+        "tibia_right"
+      ],
+      "svgPathId": "svg-tibia_right",
+      "side": "right",
+      "description": "The shin bone, which carries most of the body's weight below the knee.",
+      "considerations": [
+        {
+          "text": "Weight-bearing bones lose mineral density in microgravity unless they are regularly loaded by resistance exercise.",
+          "evidenceRef": {
+            "documentId": "doc_bone_loss_microgravity",
+            "chunkId": "4812"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ankle_left",
+      "name": "Left ankle",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "left ankle joint",
+        "ankle joint",
+        "left talocrural joint",
+        "talocrural joint"
+      ],
+      "meshNames": [
+        "ankle_left"
+      ],
+      "svgPathId": "svg-ankle_left",
+      "side": "left",
+      "description": "The joint between the lower leg and the foot."
+    },
+    {
+      "id": "ankle_right",
+      "name": "Right ankle",
+      "system": "skeletal",
+      "parentId": null,
+      "synonyms": [
+        "right ankle joint",
+        "ankle joint",
+        "right talocrural joint",
+        "talocrural joint"
+      ],
+      "meshNames": [
+        "ankle_right"
+      ],
+      "svgPathId": "svg-ankle_right",
+      "side": "right",
+      "description": "The joint between the lower leg and the foot."
+    },
+    {
+      "id": "shoulder_left",
+      "name": "Left shoulder",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "left deltoid",
+        "deltoid",
+        "left shoulder muscle",
+        "shoulder muscle"
+      ],
+      "meshNames": [
+        "shoulder_left"
+      ],
+      "svgPathId": "svg-shoulder_left",
+      "side": "left",
+      "description": "The deltoid and the muscles around the shoulder joint."
+    },
+    {
+      "id": "shoulder_right",
+      "name": "Right shoulder",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "right deltoid",
+        "deltoid",
+        "right shoulder muscle",
+        "shoulder muscle"
+      ],
+      "meshNames": [
+        "shoulder_right"
+      ],
+      "svgPathId": "svg-shoulder_right",
+      "side": "right",
+      "description": "The deltoid and the muscles around the shoulder joint."
+    },
+    {
+      "id": "forearm_left",
+      "name": "Left forearm",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "left lower arm",
+        "lower arm",
+        "left forearm muscles",
+        "forearm muscles"
+      ],
+      "meshNames": [
+        "forearm_left"
+      ],
+      "svgPathId": "svg-forearm_left",
+      "side": "left",
+      "description": "The muscles between the elbow and the wrist that move the hand and fingers."
+    },
+    {
+      "id": "forearm_right",
+      "name": "Right forearm",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "right lower arm",
+        "lower arm",
+        "right forearm muscles",
+        "forearm muscles"
+      ],
+      "meshNames": [
+        "forearm_right"
+      ],
+      "svgPathId": "svg-forearm_right",
+      "side": "right",
+      "description": "The muscles between the elbow and the wrist that move the hand and fingers."
+    },
+    {
+      "id": "quadriceps_left",
+      "name": "Left quadriceps",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "left quads",
+        "quads",
+        "left front thigh muscles",
+        "front thigh muscles"
+      ],
+      "meshNames": [
+        "quadriceps_left"
+      ],
+      "svgPathId": "svg-quadriceps_left",
+      "side": "left",
+      "description": "The four muscles at the front of the thigh that straighten the knee.",
+      "considerations": [
+        {
+          "text": "Postural and leg muscles lose mass and strength without load; resistance exercise slows the loss.",
+          "evidenceRef": {
+            "documentId": "doc_muscle_atrophy",
+            "chunkId": "3518"
+          }
+        }
+      ]
+    },
+    {
+      "id": "quadriceps_right",
+      "name": "Right quadriceps",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "right quads",
+        "quads",
+        "right front thigh muscles",
+        "front thigh muscles"
+      ],
+      "meshNames": [
+        "quadriceps_right"
+      ],
+      "svgPathId": "svg-quadriceps_right",
+      "side": "right",
+      "description": "The four muscles at the front of the thigh that straighten the knee.",
+      "considerations": [
+        {
+          "text": "Postural and leg muscles lose mass and strength without load; resistance exercise slows the loss.",
+          "evidenceRef": {
+            "documentId": "doc_muscle_atrophy",
+            "chunkId": "3518"
+          }
+        }
+      ]
+    },
+    {
+      "id": "calf_left",
+      "name": "Left calf",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "left gastrocnemius",
+        "gastrocnemius",
+        "left soleus",
+        "soleus",
+        "left calf muscle",
+        "calf muscle"
+      ],
+      "meshNames": [
+        "calf_left"
+      ],
+      "svgPathId": "svg-calf_left",
+      "side": "left",
+      "description": "The muscles at the back of the lower leg that point the foot.",
+      "considerations": [
+        {
+          "text": "Postural and leg muscles lose mass and strength without load; resistance exercise slows the loss.",
+          "evidenceRef": {
+            "documentId": "doc_muscle_atrophy",
+            "chunkId": "3518"
+          }
+        }
+      ]
+    },
+    {
+      "id": "calf_right",
+      "name": "Right calf",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "right gastrocnemius",
+        "gastrocnemius",
+        "right soleus",
+        "soleus",
+        "right calf muscle",
+        "calf muscle"
+      ],
+      "meshNames": [
+        "calf_right"
+      ],
+      "svgPathId": "svg-calf_right",
+      "side": "right",
+      "description": "The muscles at the back of the lower leg that point the foot.",
+      "considerations": [
+        {
+          "text": "Postural and leg muscles lose mass and strength without load; resistance exercise slows the loss.",
+          "evidenceRef": {
+            "documentId": "doc_muscle_atrophy",
+            "chunkId": "3518"
+          }
+        }
+      ]
+    },
+    {
+      "id": "abdominal_wall",
+      "name": "Abdominal wall",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "abs",
+        "rectus abdominis",
+        "core"
+      ],
+      "meshNames": [
+        "abdominal_wall"
+      ],
+      "svgPathId": "svg-abdominal_wall",
+      "side": "midline",
+      "description": "The layered muscles at the front and sides of the abdomen."
+    },
+    {
+      "id": "lower_back",
+      "name": "Lower back muscles",
+      "system": "muscular",
+      "parentId": null,
+      "synonyms": [
+        "erector spinae",
+        "paraspinal muscles",
+        "back muscles"
+      ],
+      "meshNames": [
+        "lower_back"
+      ],
+      "svgPathId": "svg-lower_back",
+      "side": "midline",
+      "description": "The muscles along the lower spine that hold the trunk upright.",
+      "considerations": [
+        {
+          "text": "The spine lengthens in microgravity and back pain is commonly reported early in flight.",
+          "evidenceRef": {
+            "documentId": "doc_spine_microgravity",
+            "chunkId": "1190"
+          }
+        }
+      ]
+    },
+    {
+      "id": "brain",
+      "name": "Brain",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "cerebrum",
+        "head"
+      ],
+      "meshNames": [
+        "brain"
+      ],
+      "svgPathId": "svg-brain",
+      "side": "midline",
+      "description": "The organ that controls thought, movement, sensation and the body's automatic functions."
+    },
+    {
+      "id": "spinal_cord",
+      "name": "Spinal cord",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "cord"
+      ],
+      "meshNames": [
+        "spinal_cord"
+      ],
+      "svgPathId": "svg-spinal_cord",
+      "side": "midline",
+      "description": "The bundle of nerves that runs inside the spine and links the brain to the body."
+    },
+    {
+      "id": "sciatic_nerve_left",
+      "name": "Left sciatic nerve",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "left sciatica nerve",
+        "sciatica nerve"
+      ],
+      "meshNames": [
+        "sciatic_nerve_left"
+      ],
+      "svgPathId": "svg-sciatic_nerve_left",
+      "side": "left",
+      "description": "The large nerve that runs from the lower back down the back of each leg."
+    },
+    {
+      "id": "sciatic_nerve_right",
+      "name": "Right sciatic nerve",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "right sciatica nerve",
+        "sciatica nerve"
+      ],
+      "meshNames": [
+        "sciatic_nerve_right"
+      ],
+      "svgPathId": "svg-sciatic_nerve_right",
+      "side": "right",
+      "description": "The large nerve that runs from the lower back down the back of each leg."
+    },
+    {
+      "id": "eye_left",
+      "name": "Left eye",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "left eyeball",
+        "eyeball",
+        "left vision",
+        "vision"
+      ],
+      "meshNames": [
+        "eye_left"
+      ],
+      "svgPathId": "svg-eye_left",
+      "side": "left",
+      "description": "The organ of sight. The optic nerve connects it to the brain.",
+      "considerations": [
+        {
+          "text": "Fluid shifts toward the head have been linked to changes in eye structure and vision during long-duration flight.",
+          "evidenceRef": {
+            "documentId": "doc_sans_overview",
+            "chunkId": "3301"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eye_right",
+      "name": "Right eye",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "right eyeball",
+        "eyeball",
+        "right vision",
+        "vision"
+      ],
+      "meshNames": [
+        "eye_right"
+      ],
+      "svgPathId": "svg-eye_right",
+      "side": "right",
+      "description": "The organ of sight. The optic nerve connects it to the brain.",
+      "considerations": [
+        {
+          "text": "Fluid shifts toward the head have been linked to changes in eye structure and vision during long-duration flight.",
+          "evidenceRef": {
+            "documentId": "doc_sans_overview",
+            "chunkId": "3301"
+          }
+        }
+      ]
+    },
+    {
+      "id": "inner_ear",
+      "name": "Inner ear",
+      "system": "nervous",
+      "parentId": null,
+      "synonyms": [
+        "vestibular system",
+        "balance organ",
+        "cochlea"
+      ],
+      "meshNames": [
+        "inner_ear"
+      ],
+      "svgPathId": "svg-inner_ear",
+      "side": "midline",
+      "description": "The organs of hearing and balance inside the skull, on both sides.",
+      "considerations": [
+        {
+          "text": "The vestibular system adapts to weightlessness; disorientation and motion sickness are most common in the first days and after landing.",
+          "evidenceRef": {
+            "documentId": "doc_vestibular_adaptation",
+            "chunkId": "0915"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heart",
+      "name": "Heart",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "cardiac",
+        "myocardium"
+      ],
+      "meshNames": [
+        "heart"
+      ],
+      "svgPathId": "svg-heart",
+      "side": "midline",
+      "description": "The muscular pump that moves blood through the lungs and the body.",
+      "considerations": [
+        {
+          "text": "Headward fluid shift and reduced plasma volume change cardiovascular loading in flight and on return to gravity.",
+          "evidenceRef": {
+            "documentId": "doc_cardiovascular_fluid_shift",
+            "chunkId": "2760"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aorta",
+      "name": "Aorta",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "main artery"
+      ],
+      "meshNames": [
+        "aorta"
+      ],
+      "svgPathId": "svg-aorta",
+      "side": "midline",
+      "description": "The main artery leaving the heart and running down through the chest and abdomen."
+    },
+    {
+      "id": "carotid_left",
+      "name": "Left carotid artery",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "left neck artery",
+        "neck artery"
+      ],
+      "meshNames": [
+        "carotid_left"
+      ],
+      "svgPathId": "svg-carotid_left",
+      "side": "left",
+      "description": "The artery on each side of the neck that supplies the head and brain."
+    },
+    {
+      "id": "carotid_right",
+      "name": "Right carotid artery",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "right neck artery",
+        "neck artery"
+      ],
+      "meshNames": [
+        "carotid_right"
+      ],
+      "svgPathId": "svg-carotid_right",
+      "side": "right",
+      "description": "The artery on each side of the neck that supplies the head and brain."
+    },
+    {
+      "id": "femoral_artery_left",
+      "name": "Left femoral artery",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "left thigh artery",
+        "thigh artery",
+        "left groin artery",
+        "groin artery"
+      ],
+      "meshNames": [
+        "femoral_artery_left"
+      ],
+      "svgPathId": "svg-femoral_artery_left",
+      "side": "left",
+      "description": "The main artery of the thigh."
+    },
+    {
+      "id": "femoral_artery_right",
+      "name": "Right femoral artery",
+      "system": "cardiovascular",
+      "parentId": null,
+      "synonyms": [
+        "right thigh artery",
+        "thigh artery",
+        "right groin artery",
+        "groin artery"
+      ],
+      "meshNames": [
+        "femoral_artery_right"
+      ],
+      "svgPathId": "svg-femoral_artery_right",
+      "side": "right",
+      "description": "The main artery of the thigh."
+    },
+    {
+      "id": "thorax",
+      "name": "Thorax",
+      "system": "respiratory",
+      "parentId": null,
+      "synonyms": [
+        "chest",
+        "chest cavity"
+      ],
+      "meshNames": [
+        "thorax"
+      ],
+      "svgPathId": "svg-thorax",
+      "side": "midline",
+      "description": "The chest cavity, holding the lungs, heart and airways."
+    },
+    {
+      "id": "lung_left",
+      "name": "Left lung",
+      "system": "respiratory",
+      "parentId": "thorax",
+      "synonyms": [
+        "left pulmonary",
+        "pulmonary"
+      ],
+      "meshNames": [
+        "lung_left"
+      ],
+      "svgPathId": "svg-lung_left",
+      "side": "left",
+      "description": "The organ that brings air into contact with blood to exchange oxygen and carbon dioxide."
+    },
+    {
+      "id": "lung_right",
+      "name": "Right lung",
+      "system": "respiratory",
+      "parentId": "thorax",
+      "synonyms": [
+        "right pulmonary",
+        "pulmonary"
+      ],
+      "meshNames": [
+        "lung_right"
+      ],
+      "svgPathId": "svg-lung_right",
+      "side": "right",
+      "description": "The organ that brings air into contact with blood to exchange oxygen and carbon dioxide."
+    },
+    {
+      "id": "trachea",
+      "name": "Trachea",
+      "system": "respiratory",
+      "parentId": "thorax",
+      "synonyms": [
+        "windpipe",
+        "airway"
+      ],
+      "meshNames": [
+        "trachea"
+      ],
+      "svgPathId": "svg-trachea",
+      "side": "midline",
+      "description": "The windpipe, which carries air from the throat to the lungs."
+    },
+    {
+      "id": "diaphragm",
+      "name": "Diaphragm",
+      "system": "respiratory",
+      "parentId": "thorax",
+      "synonyms": [
+        "breathing muscle"
+      ],
+      "meshNames": [
+        "diaphragm"
+      ],
+      "svgPathId": "svg-diaphragm",
+      "side": "midline",
+      "description": "The dome-shaped muscle under the lungs that drives breathing."
+    },
+    {
+      "id": "nasal_cavity",
+      "name": "Nasal cavity",
+      "system": "respiratory",
+      "parentId": null,
+      "synonyms": [
+        "nose",
+        "sinuses"
+      ],
+      "meshNames": [
+        "nasal_cavity"
+      ],
+      "svgPathId": "svg-nasal_cavity",
+      "side": "midline",
+      "description": "The airway inside the nose. Congestion is common when fluid shifts toward the head.",
+      "considerations": [
+        {
+          "text": "Headward fluid shift and reduced plasma volume change cardiovascular loading in flight and on return to gravity.",
+          "evidenceRef": {
+            "documentId": "doc_cardiovascular_fluid_shift",
+            "chunkId": "2760"
+          }
+        }
+      ]
+    },
+    {
+      "id": "esophagus",
+      "name": "Esophagus",
+      "system": "digestive",
+      "parentId": null,
+      "synonyms": [
+        "gullet",
+        "food pipe"
+      ],
+      "meshNames": [
+        "esophagus"
+      ],
+      "svgPathId": "svg-esophagus",
+      "side": "midline",
+      "description": "The muscular tube that carries food from the throat to the stomach."
+    },
+    {
+      "id": "stomach",
+      "name": "Stomach",
+      "system": "digestive",
+      "parentId": null,
+      "synonyms": [
+        "gastric",
+        "belly"
+      ],
+      "meshNames": [
+        "stomach"
+      ],
+      "svgPathId": "svg-stomach",
+      "side": "midline",
+      "description": "The organ that stores and starts to digest food."
+    },
+    {
+      "id": "liver",
+      "name": "Liver",
+      "system": "digestive",
+      "parentId": null,
+      "synonyms": [
+        "hepatic"
+      ],
+      "meshNames": [
+        "liver"
+      ],
+      "svgPathId": "svg-liver",
+      "side": "midline",
+      "description": "The large organ under the right ribs that processes nutrients and drugs."
+    },
+    {
+      "id": "intestine_small",
+      "name": "Small intestine",
+      "system": "digestive",
+      "parentId": null,
+      "synonyms": [
+        "bowel",
+        "gut",
+        "small bowel"
+      ],
+      "meshNames": [
+        "intestine_small"
+      ],
+      "svgPathId": "svg-intestine_small",
+      "side": "midline",
+      "description": "The long, coiled tube where most nutrients are absorbed."
+    },
+    {
+      "id": "colon",
+      "name": "Large intestine",
+      "system": "digestive",
+      "parentId": null,
+      "synonyms": [
+        "colon",
+        "large bowel"
+      ],
+      "meshNames": [
+        "colon"
+      ],
+      "svgPathId": "svg-colon",
+      "side": "midline",
+      "description": "The final part of the gut, which absorbs water and forms stool."
+    },
+    {
+      "id": "kidney_left",
+      "name": "Left kidney",
+      "system": "urinary",
+      "parentId": null,
+      "synonyms": [
+        "left renal",
+        "renal"
+      ],
+      "meshNames": [
+        "kidney_left"
+      ],
+      "svgPathId": "svg-kidney_left",
+      "side": "left",
+      "description": "The organ that filters blood and makes urine. It sits at the back of the abdomen.",
+      "considerations": [
+        {
+          "text": "Bone demineralisation raises urinary calcium, which is associated with a higher risk of kidney stones.",
+          "evidenceRef": {
+            "documentId": "doc_renal_stone_risk",
+            "chunkId": "1874"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kidney_right",
+      "name": "Right kidney",
+      "system": "urinary",
+      "parentId": null,
+      "synonyms": [
+        "right renal",
+        "renal"
+      ],
+      "meshNames": [
+        "kidney_right"
+      ],
+      "svgPathId": "svg-kidney_right",
+      "side": "right",
+      "description": "The organ that filters blood and makes urine. It sits at the back of the abdomen.",
+      "considerations": [
+        {
+          "text": "Bone demineralisation raises urinary calcium, which is associated with a higher risk of kidney stones.",
+          "evidenceRef": {
+            "documentId": "doc_renal_stone_risk",
+            "chunkId": "1874"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ureter_left",
+      "name": "Left ureter",
+      "system": "urinary",
+      "parentId": "kidney_left",
+      "synonyms": [],
+      "meshNames": [
+        "ureter_left"
+      ],
+      "svgPathId": "svg-ureter_left",
+      "side": "left",
+      "description": "The tube that carries urine from the kidney to the bladder."
+    },
+    {
+      "id": "ureter_right",
+      "name": "Right ureter",
+      "system": "urinary",
+      "parentId": "kidney_right",
+      "synonyms": [],
+      "meshNames": [
+        "ureter_right"
+      ],
+      "svgPathId": "svg-ureter_right",
+      "side": "right",
+      "description": "The tube that carries urine from the kidney to the bladder."
+    },
+    {
+      "id": "bladder",
+      "name": "Bladder",
+      "system": "urinary",
+      "parentId": null,
+      "synonyms": [
+        "urinary bladder"
+      ],
+      "meshNames": [
+        "bladder"
+      ],
+      "svgPathId": "svg-bladder",
+      "side": "midline",
+      "description": "The organ that stores urine."
+    },
+    {
+      "id": "spleen",
+      "name": "Spleen",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "splenic"
+      ],
+      "meshNames": [
+        "spleen"
+      ],
+      "svgPathId": "svg-spleen",
+      "side": "midline",
+      "description": "The organ under the left ribs that filters blood and supports immune function.",
+      "considerations": [
+        {
+          "text": "Immune function can change in long-duration flight, including reactivation of latent viruses.",
+          "evidenceRef": {
+            "documentId": "doc_immune_dysregulation",
+            "chunkId": "2093"
+          }
+        }
+      ]
+    },
+    {
+      "id": "thymus",
+      "name": "Thymus",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [],
+      "meshNames": [
+        "thymus"
+      ],
+      "svgPathId": "svg-thymus",
+      "side": "midline",
+      "description": "A small organ behind the breastbone that trains immune cells."
+    },
+    {
+      "id": "lymph_cervical",
+      "name": "Cervical lymph nodes",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "neck glands",
+        "neck lymph nodes"
+      ],
+      "meshNames": [
+        "lymph_cervical"
+      ],
+      "svgPathId": "svg-lymph_cervical",
+      "side": "midline",
+      "description": "Lymph nodes along both sides of the neck."
+    },
+    {
+      "id": "lymph_axillary_left",
+      "name": "Left axillary lymph nodes",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "left armpit lymph nodes",
+        "armpit lymph nodes",
+        "left armpit glands",
+        "armpit glands"
+      ],
+      "meshNames": [
+        "lymph_axillary_left"
+      ],
+      "svgPathId": "svg-lymph_axillary_left",
+      "side": "left",
+      "description": "Lymph nodes in the armpit."
+    },
+    {
+      "id": "lymph_axillary_right",
+      "name": "Right axillary lymph nodes",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "right armpit lymph nodes",
+        "armpit lymph nodes",
+        "right armpit glands",
+        "armpit glands"
+      ],
+      "meshNames": [
+        "lymph_axillary_right"
+      ],
+      "svgPathId": "svg-lymph_axillary_right",
+      "side": "right",
+      "description": "Lymph nodes in the armpit."
+    },
+    {
+      "id": "lymph_inguinal_left",
+      "name": "Left inguinal lymph nodes",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "left groin lymph nodes",
+        "groin lymph nodes",
+        "left groin glands",
+        "groin glands"
+      ],
+      "meshNames": [
+        "lymph_inguinal_left"
+      ],
+      "svgPathId": "svg-lymph_inguinal_left",
+      "side": "left",
+      "description": "Lymph nodes in the groin."
+    },
+    {
+      "id": "lymph_inguinal_right",
+      "name": "Right inguinal lymph nodes",
+      "system": "lymphatic",
+      "parentId": null,
+      "synonyms": [
+        "right groin lymph nodes",
+        "groin lymph nodes",
+        "right groin glands",
+        "groin glands"
+      ],
+      "meshNames": [
+        "lymph_inguinal_right"
+      ],
+      "svgPathId": "svg-lymph_inguinal_right",
+      "side": "right",
+      "description": "Lymph nodes in the groin."
+    },
+    {
+      "id": "skin",
+      "name": "Skin",
+      "system": "integumentary",
+      "parentId": null,
+      "synonyms": [
+        "integument",
+        "dermis",
+        "epidermis"
+      ],
+      "meshNames": [
+        "skin"
+      ],
+      "svgPathId": "svg-skin",
+      "side": "midline",
+      "description": "The body's outer covering. It protects, senses and helps control temperature.",
+      "considerations": [
+        {
+          "text": "Dry air and limited washing in closed habitats are often linked to dry, irritated skin, especially on the hands.",
+          "evidenceRef": {
+            "documentId": "doc_skin_closed_habitat",
+            "chunkId": "0642"
+          }
+        }
+      ]
+    },
+    {
+      "id": "scalp",
+      "name": "Scalp",
+      "system": "integumentary",
+      "parentId": "skin",
+      "synonyms": [
+        "head skin",
+        "hair"
+      ],
+      "meshNames": [
+        "scalp"
+      ],
+      "svgPathId": "svg-scalp",
+      "side": "midline",
+      "description": "The skin covering the top of the head."
+    },
+    {
+      "id": "hand_left",
+      "name": "Left hand",
+      "system": "integumentary",
+      "parentId": "skin",
+      "synonyms": [
+        "left palm",
+        "palm",
+        "left fingers",
+        "fingers",
+        "left hand skin",
+        "hand skin"
+      ],
+      "meshNames": [
+        "hand_left"
+      ],
+      "svgPathId": "svg-hand_left",
+      "side": "left",
+      "description": "The skin and soft tissue of the hand and fingers.",
+      "considerations": [
+        {
+          "text": "Dry air and limited washing in closed habitats are often linked to dry, irritated skin, especially on the hands.",
+          "evidenceRef": {
+            "documentId": "doc_skin_closed_habitat",
+            "chunkId": "0642"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hand_right",
+      "name": "Right hand",
+      "system": "integumentary",
+      "parentId": "skin",
+      "synonyms": [
+        "right palm",
+        "palm",
+        "right fingers",
+        "fingers",
+        "right hand skin",
+        "hand skin"
+      ],
+      "meshNames": [
+        "hand_right"
+      ],
+      "svgPathId": "svg-hand_right",
+      "side": "right",
+      "description": "The skin and soft tissue of the hand and fingers.",
+      "considerations": [
+        {
+          "text": "Dry air and limited washing in closed habitats are often linked to dry, irritated skin, especially on the hands.",
+          "evidenceRef": {
+            "documentId": "doc_skin_closed_habitat",
+            "chunkId": "0642"
+          }
+        }
+      ]
+    },
+    {
+      "id": "foot_left",
+      "name": "Left foot",
+      "system": "integumentary",
+      "parentId": "skin",
+      "synonyms": [
+        "left sole",
+        "sole",
+        "left toes",
+        "toes",
+        "left foot skin",
+        "foot skin"
+      ],
+      "meshNames": [
+        "foot_left"
+      ],
+      "svgPathId": "svg-foot_left",
+      "side": "left",
+      "description": "The skin and soft tissue of the foot. Soles can thin and peel when they carry no weight."
+    },
+    {
+      "id": "foot_right",
+      "name": "Right foot",
+      "system": "integumentary",
+      "parentId": "skin",
+      "synonyms": [
+        "right sole",
+        "sole",
+        "right toes",
+        "toes",
+        "right foot skin",
+        "foot skin"
+      ],
+      "meshNames": [
+        "foot_right"
+      ],
+      "svgPathId": "svg-foot_right",
+      "side": "right",
+      "description": "The skin and soft tissue of the foot. Soles can thin and peel when they carry no weight."
+    }
+  ]
+}

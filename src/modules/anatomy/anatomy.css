@@ -1,0 +1,23 @@
+/*
+ * Anatomy lab — module-only tokens (Module 2, section 3.1).
+ * Layer swatches and mesh tints only. Status colors stay reserved for pins.
+ * `static` keeps every variable in the output: three.js reads them at runtime
+ * through getComputedStyle, even when no utility class uses them.
+ *
+ * `@tailwind utilities source(none)` only makes the Tailwind plugin compile this
+ * file (it generates no classes); swatches use var(--color-layer-*) directly.
+ * tokens.css is not edited.
+ */
+@tailwind utilities source(none);
+
+@theme static {
+  --color-layer-skeletal: #D8D2C4;
+  --color-layer-muscular: #B5656A;
+  --color-layer-nervous: #E0C46C;
+  --color-layer-cardiovascular: #C9444F;
+  --color-layer-respiratory: #7FB2D9;
+  --color-layer-digestive: #C8996B;
+  --color-layer-urinary: #9C8AD0;
+  --color-layer-lymphatic: #7CC4A4;
+  --color-layer-integumentary: #C9A58F;
+}

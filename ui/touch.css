@@ -1,0 +1,96 @@
+/* Touch screens, such as the crew's shared iPad. Loaded last.
+   Controls reach a 44px target on a coarse pointer, while mouse and trackpad layouts keep their density.
+   Small visual marks (checkboxes, inline text buttons) keep their look and gain an invisible hit area instead. */
+@media (pointer: coarse) {
+  .button, .button.small, main .button, .page-heading .button, .feature-finder-trigger, .demo-tag, .viewer-tag, .care-header-response, .main-nav a, .rail-settings, .segmented button, .chart-metric-tabs button, .app-footer button, .field-input, select.field-input, .trends-select { min-height: 44px }
+  .hero .button, .hero-action .button, .health-warning-action, .instruction-link, .system-layer-toggle, .layer-isolate, .anatomy-view-bar button, .system-menu-tools button, .body-hotspot { min-height: 44px }
+  .icon-button, .table-delete, .feature-finder-trigger, .demo-tag, .assistant-launch, .topbar .crew-avatar, .topbar-actions .crew-avatar, .care-header-response, .segmented button, .chart-metric-tabs button, .anatomy-stage-tools button, .layer-isolate { min-width: 44px; min-height: 44px }
+  .care-radio-row label, .care-symptoms label { min-height: 44px }
+  .anatomy-view-bar button, .system-menu-tools button { min-width: 44px }
+  .anatomy-source-link { min-height: 44px }
+  .anatomy-panel .button, .conditions-add .button, .lab-jump-nav button, .condition-examples button, .lab-workspace-toolbar button, main select, main input[type=search], main input[type=range] { min-height: 44px }
+  .lab-workspace-toolbar button { min-width: 44px }
+  .mission-research-tabs a, .lab-tool-row select, .lab-motion-controls select, .lab-browser .field-input { min-height: 44px }
+  .mission-research-tabs a { display: inline-flex; align-items: center }
+  .system-nav button { min-height: 44px }
+  main select.field-input, main input.field-input, main .lab-region-tools .field-input, .lab-browser #anatomy-browser-controls > .field-input, #lab-region-select { min-height: 44px }
+  .mission-evidence-foot { align-items: stretch }
+  .mission-evidence-foot>div { width: 100%; gap: 4px }
+  .mission-evidence-foot a { min-height: 44px; display: inline-flex; align-items: center }
+  .mission-evidence-foot a::after { content: none }
+  .care-enable-reminders { position: relative; min-height: 44px; display: flex; align-items: center }
+  .anatomy-marker { position: relative }
+  .anatomy-marker::after { content: ''; position: absolute; inset: -10px; border-radius: 50% }
+  /* Range thumbs are easier to catch with a taller track area. */
+  .chart-foot a { position: relative }
+  .chart-foot a::after { content: ''; position: absolute; inset: -14px -6px }
+  .topbar .crew-avatar, .topbar-actions .crew-avatar { width: 44px; height: 44px }
+  .mood-option span { min-height: 44px; display: flex; flex-direction: column; justify-content: center }
+
+  /* Keep the drawn size, widen what a finger can hit. */
+  .text-button, .check-box, .anatomy-source-link { position: relative }
+  .text-button::after, .anatomy-source-link::after { content: ''; position: absolute; inset: -12px -12px }
+  .check-box::after { content: ''; position: absolute; inset: -13px }
+
+  /* No hover on touch: show the hover fill as pressed feedback instead. */
+  .button:active, .main-nav a:active, .viewer-option:active { background: var(--paper) }
+  .button.primary:active { background: var(--mission-blue-deep) }
+}
+
+/* The header keeps every control on one row, from the iPad in landscape down to phones. */
+@media (max-width: 1379px) {
+  .viewer-tag-label { display: none }
+}
+@media (max-width: 1099px) {
+  .feature-finder-trigger span, .feature-finder-trigger kbd { display: none }
+  .viewer-tag { gap: 5px; padding: 6px 9px }
+  .viewer-tag-name { display: none }
+  .viewer-tag-short { display: inline }
+}
+@media (max-width: 430px) {
+  .topbar { gap: 6px; padding: 0 10px }
+  .topbar-actions { gap: 5px }
+  .header-divider { display: none }
+  /* The workspace label stays readable to screen readers; the dot still marks the workspace on screen. */
+  #data-mode { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap }
+  .demo-tag { padding: 6px 10px }
+}
+@media (max-width: 360px) {
+  /* The red alert icon and its accessible name stay; the word goes so the header fits on one row. */
+  .care-header-response { padding: 6px 10px }
+  .care-header-response:after { content: none }
+}
+
+/* Library citations use real touch targets so neighboring links cannot overlap. */
+@media (pointer: coarse) {
+  /* Citation pills grow and spread out on touch, so each has a 44px target of its own. */
+  .onboard-cite { min-width: 32px; height: 24px; margin: 0 5px }
+  .onboard-cite::after { content: ''; position: absolute; inset: -10px -6px }
+  .onboard-sources a { min-height: 44px; display: flex; align-items: center }
+  /* Medical response stays inside its sentence; vertical padding widens the tap area without moving the text. */
+  .onboard-limit .text-button { display: inline; padding-block: 13px; margin-block: -13px }
+  .onboard-starters button, .mission-research-more a, .mission-ask-about, .mission-ask-search { min-height: 44px }
+  /* These are already 44px tall, so the generic text-button hit area would only spill onto the link or field next to them. */
+  .mission-ask-about::after, .mission-ask-search::after { content: none }
+  .onboard-sources-box>summary { min-height: 44px; padding-block: 12px }
+  .onboard-help summary, .onboard-passage summary, .mission-research-context summary { min-height: 44px; padding-block: 10px }
+  .onboard-ask>summary { min-height: 44px }
+  .onboard-sources a::after, .onboard-limit .text-button::after { content: none }
+  .onboard-form .button { min-height: 44px }
+}
+@media (pointer: coarse) {
+  .brief-hrp-list a { display: inline-flex; align-items: center; min-height: 44px }
+  .brief-hrp-studies > summary { min-height: 44px; padding-block: 10px }
+}
+@media (pointer: coarse) {
+  .hrp-risk-list a { display: inline-flex; align-items: center; min-height: 44px }
+  .hrp-risk-list summary { min-height: 44px; display: list-item; padding-block: 12px }
+  .hrp-risk-note a { display: inline-block; padding-block: 13px; margin-block: -13px }
+}
+@media (pointer: coarse) {
+  .hrp-quote footer a, .hrp-studies a { display: inline-block; padding-block: 13px; margin-block: -13px }
+}
+@media (pointer: coarse) {
+  .mission-check > summary { min-height: 44px; display: list-item; padding-block: 12px }
+  .mission-reflect-prompt .text-button { min-height: 44px }
+}

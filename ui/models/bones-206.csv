@@ -1,0 +1,207 @@
+Number,Bone,Division,Group,Region,Atlas mesh IDs,Geometry coverage
+1,Frontal bone,Axial,Cranial bones,head-neck,FJ3200,Present
+2,Occipital bone,Axial,Cranial bones,head-neck,FJ3309,Present
+3,Sphenoid bone,Axial,Cranial bones,head-neck,FJ3394,Present
+4,Ethmoid bone,Axial,Cranial bones,head-neck,FJ3199,Present
+5,Left parietal bone,Axial,Cranial bones,head-neck,FJ3274,Present
+6,Left temporal bone,Axial,Cranial bones,head-neck,FJ3281,Present
+7,Right parietal bone,Axial,Cranial bones,head-neck,FJ3380,Present
+8,Right temporal bone,Axial,Cranial bones,head-neck,FJ3386,Present
+9,Mandible,Axial,Facial bones,head-neck,FJ3289,Present
+10,Vomer,Axial,Facial bones,head-neck,FJ3395,Present
+11,Left maxilla,Axial,Facial bones,head-neck,FJ3269,Present
+12,Left zygomatic bone,Axial,Facial bones,head-neck,FJ3287,Present
+13,Left nasal bone,Axial,Facial bones,head-neck,FJ3272,Present
+14,Left lacrimal bone,Axial,Facial bones,head-neck,FJ3265,Present
+15,Left palatine bone,Axial,Facial bones,head-neck,FJ3273,Present
+16,Left inferior nasal concha,Axial,Facial bones,head-neck,FJ3263,Present
+17,Right maxilla,Axial,Facial bones,head-neck,FJ3375,Present
+18,Right zygomatic bone,Axial,Facial bones,head-neck,FJ3392,Present
+19,Right nasal bone,Axial,Facial bones,head-neck,FJ3378,Present
+20,Right lacrimal bone,Axial,Facial bones,head-neck,FJ3371,Present
+21,Right palatine bone,Axial,Facial bones,head-neck,FJ3379,Present
+22,Right inferior nasal concha,Axial,Facial bones,head-neck,FJ3369,Present
+23,Left malleus,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+24,Left incus,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+25,Left stapes,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+26,Right malleus,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+27,Right incus,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+28,Right stapes,Axial,Auditory ossicles,head-neck,,Schematic teaching model
+29,Hyoid bone,Axial,Hyoid,head-neck,FJ3201,Present
+30,C1 cervical vertebra (atlas),Axial,Vertebral column,head-neck,FJ3176,Present
+31,C2 cervical vertebra (axis),Axial,Vertebral column,head-neck,FJ3177,Present
+32,C3 cervical vertebra,Axial,Vertebral column,head-neck,FJ3161,Present
+33,C4 cervical vertebra,Axial,Vertebral column,head-neck,FJ3164,Present
+34,C5 cervical vertebra,Axial,Vertebral column,head-neck,FJ3167,Present
+35,C6 cervical vertebra,Axial,Vertebral column,head-neck,FJ3170,Present
+36,C7 cervical vertebra,Axial,Vertebral column,head-neck,FJ3172,Present
+37,T1 thoracic vertebra,Axial,Vertebral column,thorax,FJ3158,Present
+38,T2 thoracic vertebra,Axial,Vertebral column,thorax,FJ3160,Present
+39,T3 thoracic vertebra,Axial,Vertebral column,thorax,FJ3163,Present
+40,T4 thoracic vertebra,Axial,Vertebral column,thorax,FJ3166,Present
+41,T5 thoracic vertebra,Axial,Vertebral column,thorax,FJ3169,Present
+42,T6 thoracic vertebra,Axial,Vertebral column,thorax,FJ3171,Present
+43,T7 thoracic vertebra,Axial,Vertebral column,thorax,FJ3173,Present
+44,T8 thoracic vertebra,Axial,Vertebral column,thorax,FJ3174,Present
+45,T9 thoracic vertebra,Axial,Vertebral column,thorax,FJ3175,Present
+46,T10 thoracic vertebra,Axial,Vertebral column,thorax,FJ3154,Present
+47,T11 thoracic vertebra,Axial,Vertebral column,thorax,FJ3155,Present
+48,T12 thoracic vertebra,Axial,Vertebral column,thorax,FJ3156,Present
+49,L1 lumbar vertebra,Axial,Vertebral column,abdomen,FJ3157,Present
+50,L2 lumbar vertebra,Axial,Vertebral column,abdomen,FJ3159,Present
+51,L3 lumbar vertebra,Axial,Vertebral column,abdomen,FJ3162,Present
+52,L4 lumbar vertebra,Axial,Vertebral column,abdomen,FJ3165,Present
+53,L5 lumbar vertebra,Axial,Vertebral column,abdomen,FJ3168,Present
+54,Sacrum,Axial,Vertebral column,pelvis,FJ3393,Present
+55,Coccyx,Axial,Vertebral column,pelvis,ZA-1003,Present (Z-Anatomy)
+56,Sternum,Axial,Thoracic cage,thorax,FJ3290; FJ3178; FJ3153,Present
+57,Left rib 1,Axial,Thoracic cage,thorax,FJ3228,Present
+58,Left rib 2,Axial,Thoracic cage,thorax,FJ3229,Present
+59,Left rib 3,Axial,Thoracic cage,thorax,FJ3230,Present
+60,Left rib 4,Axial,Thoracic cage,thorax,FJ3231,Present
+61,Left rib 5,Axial,Thoracic cage,thorax,FJ3232,Present
+62,Left rib 6,Axial,Thoracic cage,thorax,FJ3233,Present
+63,Left rib 7,Axial,Thoracic cage,thorax,FJ3234,Present
+64,Left rib 8,Axial,Thoracic cage,thorax,FJ3235,Present
+65,Left rib 9,Axial,Thoracic cage,thorax,FJ3236,Present
+66,Left rib 10,Axial,Thoracic cage,thorax,FJ3225,Present
+67,Left rib 11,Axial,Thoracic cage,thorax,FJ3226,Present
+68,Left rib 12,Axial,Thoracic cage,thorax,FJ3227,Present
+69,Right rib 1,Axial,Thoracic cage,thorax,FJ3334,Present
+70,Right rib 2,Axial,Thoracic cage,thorax,FJ3336,Present
+71,Right rib 3,Axial,Thoracic cage,thorax,FJ3338,Present
+72,Right rib 4,Axial,Thoracic cage,thorax,FJ3340,Present
+73,Right rib 5,Axial,Thoracic cage,thorax,FJ3342,Present
+74,Right rib 6,Axial,Thoracic cage,thorax,FJ3344,Present
+75,Right rib 7,Axial,Thoracic cage,thorax,FJ3346,Present
+76,Right rib 8,Axial,Thoracic cage,thorax,FJ3347,Present
+77,Right rib 9,Axial,Thoracic cage,thorax,FJ3348,Present
+78,Right rib 10,Axial,Thoracic cage,thorax,FJ3330,Present
+79,Right rib 11,Axial,Thoracic cage,thorax,FJ3331,Present
+80,Right rib 12,Axial,Thoracic cage,thorax,FJ3332,Present
+81,Left clavicle,Appendicular,Pectoral girdle,upper,FJ3237,Present
+82,Left scapula,Appendicular,Pectoral girdle,upper,FJ3279,Present
+83,Right clavicle,Appendicular,Pectoral girdle,upper,FJ3362,Present
+84,Right scapula,Appendicular,Pectoral girdle,upper,FJ3384,Present
+85,Left humerus,Appendicular,Arm and forearm,upper,FJ3262,Present
+86,Left radius,Appendicular,Arm and forearm,upper,FJ3277,Present
+87,Left ulna,Appendicular,Arm and forearm,upper,FJ3286,Present
+88,Left scaphoid,Appendicular,Carpals,upper,FJ3278,Present
+89,Left lunate,Appendicular,Carpals,upper,FJ3268,Present
+90,Left triquetrum,Appendicular,Carpals,upper,FJ3285,Present
+91,Left pisiform,Appendicular,Carpals,upper,FJ3276,Present
+92,Left trapezium,Appendicular,Carpals,upper,FJ3283,Present
+93,Left trapezoid,Appendicular,Carpals,upper,FJ3284,Present
+94,Left capitate,Appendicular,Carpals,upper,FJ3257,Present
+95,Left hamate,Appendicular,Carpals,upper,FJ3261,Present
+96,Left metacarpal 1,Appendicular,Metacarpals,upper,FJ3240,Present
+97,Left metacarpal 2,Appendicular,Metacarpals,upper,FJ3243,Present
+98,Left metacarpal 3,Appendicular,Metacarpals,upper,FJ3246,Present
+99,Left metacarpal 4,Appendicular,Metacarpals,upper,FJ3249,Present
+100,Left metacarpal 5,Appendicular,Metacarpals,upper,FJ3252,Present
+101,Proximal phalanx of left thumb,Appendicular,Hand phalanges,upper,FJ3318,Present
+102,Distal phalanx of left thumb,Appendicular,Hand phalanges,upper,FJ3188,Present
+103,Proximal phalanx of left index finger,Appendicular,Hand phalanges,upper,FJ3313,Present
+104,Middle phalanx of left index finger,Appendicular,Hand phalanges,upper,FJ3296,Present
+105,Distal phalanx of left index finger,Appendicular,Hand phalanges,upper,FJ3183,Present
+106,Proximal phalanx of left middle finger,Appendicular,Hand phalanges,upper,FJ3316,Present
+107,Middle phalanx of left middle finger,Appendicular,Hand phalanges,upper,FJ3299,Present
+108,Distal phalanx of left middle finger,Appendicular,Hand phalanges,upper,FJ3186,Present
+109,Proximal phalanx of left ring finger,Appendicular,Hand phalanges,upper,FJ3317,Present
+110,Middle phalanx of left ring finger,Appendicular,Hand phalanges,upper,FJ3291,Present
+111,Distal phalanx of left ring finger,Appendicular,Hand phalanges,upper,FJ3187,Present
+112,Proximal phalanx of left little finger,Appendicular,Hand phalanges,upper,FJ3314,Present
+113,Middle phalanx of left little finger,Appendicular,Hand phalanges,upper,FJ3297,Present
+114,Distal phalanx of left little finger,Appendicular,Hand phalanges,upper,FJ3184,Present
+115,Right humerus,Appendicular,Arm and forearm,upper,FJ3368,Present
+116,Right radius,Appendicular,Arm and forearm,upper,FJ3349,Present
+117,Right ulna,Appendicular,Arm and forearm,upper,FJ3391,Present
+118,Right scaphoid,Appendicular,Carpals,upper,FJ3383,Present
+119,Right lunate,Appendicular,Carpals,upper,FJ3374,Present
+120,Right triquetrum,Appendicular,Carpals,upper,FJ3390,Present
+121,Right pisiform,Appendicular,Carpals,upper,FJ3382,Present
+122,Right trapezium,Appendicular,Carpals,upper,FJ3388,Present
+123,Right trapezoid,Appendicular,Carpals,upper,FJ3389,Present
+124,Right capitate,Appendicular,Carpals,upper,FJ3361,Present
+125,Right hamate,Appendicular,Carpals,upper,FJ3367,Present
+126,Right metacarpal 1,Appendicular,Metacarpals,upper,FJ3350,Present
+127,Right metacarpal 2,Appendicular,Metacarpals,upper,FJ3352,Present
+128,Right metacarpal 3,Appendicular,Metacarpals,upper,FJ3354,Present
+129,Right metacarpal 4,Appendicular,Metacarpals,upper,FJ3356,Present
+130,Right metacarpal 5,Appendicular,Metacarpals,upper,FJ3358,Present
+131,Proximal phalanx of right thumb,Appendicular,Hand phalanges,upper,FJ3327,Present
+132,Distal phalanx of right thumb,Appendicular,Hand phalanges,upper,FJ3198,Present
+133,Proximal phalanx of right index finger,Appendicular,Hand phalanges,upper,FJ3322,Present
+134,Middle phalanx of right index finger,Appendicular,Hand phalanges,upper,FJ3303,Present
+135,Distal phalanx of right index finger,Appendicular,Hand phalanges,upper,FJ3193,Present
+136,Proximal phalanx of right middle finger,Appendicular,Hand phalanges,upper,FJ3325,Present
+137,Middle phalanx of right middle finger,Appendicular,Hand phalanges,upper,FJ3306,Present
+138,Distal phalanx of right middle finger,Appendicular,Hand phalanges,upper,FJ3196,Present
+139,Proximal phalanx of right ring finger,Appendicular,Hand phalanges,upper,FJ3326,Present
+140,Middle phalanx of right ring finger,Appendicular,Hand phalanges,upper,FJ3292,Present
+141,Distal phalanx of right ring finger,Appendicular,Hand phalanges,upper,FJ3197,Present
+142,Proximal phalanx of right little finger,Appendicular,Hand phalanges,upper,FJ3323,Present
+143,Middle phalanx of right little finger,Appendicular,Hand phalanges,upper,FJ3304,Present
+144,Distal phalanx of right little finger,Appendicular,Hand phalanges,upper,FJ3194,Present
+145,Left hip bone,Appendicular,Pelvic girdle,pelvis,FJ3288,Present
+146,Right hip bone,Appendicular,Pelvic girdle,pelvis,FJ3152,Present
+147,Left femur,Appendicular,Thigh and leg,lower,FJ3259,Present
+148,Left patella,Appendicular,Thigh and leg,lower,FJ3275,Present
+149,Left tibia,Appendicular,Thigh and leg,lower,FJ3282,Present
+150,Left fibula,Appendicular,Thigh and leg,lower,FJ3260,Present
+151,Left talus,Appendicular,Tarsals,lower,FJ3280,Present
+152,Left calcaneus,Appendicular,Tarsals,lower,FJ3256,Present
+153,Left navicular,Appendicular,Tarsals,lower,FJ3307,Present
+154,Left cuboid,Appendicular,Tarsals,lower,FJ3258,Present
+155,Left medial cuneiform,Appendicular,Tarsals,lower,FJ3271,Present
+156,Left intermediate cuneiform,Appendicular,Tarsals,lower,FJ3264,Present
+157,Left lateral cuneiform,Appendicular,Tarsals,lower,FJ3267,Present
+158,Left metatarsal 1,Appendicular,Metatarsals,lower,FJ3241,Present
+159,Left metatarsal 2,Appendicular,Metatarsals,lower,FJ3244,Present
+160,Left metatarsal 3,Appendicular,Metatarsals,lower,FJ3247,Present
+161,Left metatarsal 4,Appendicular,Metatarsals,lower,FJ3250,Present
+162,Left metatarsal 5,Appendicular,Metatarsals,lower,FJ3253,Present
+163,Proximal phalanx of left great toe (hallux),Appendicular,Foot phalanges,lower,FJ3329,Present
+164,Distal phalanx of left great toe (hallux),Appendicular,Foot phalanges,lower,FJ3182,Present
+165,Proximal phalanx of left second toe,Appendicular,Foot phalanges,lower,FJ3328,Present
+166,Middle phalanx of left second toe,Appendicular,Foot phalanges,lower,FJ3293,Present
+167,Distal phalanx of left second toe,Appendicular,Foot phalanges,lower,FJ3179,Present
+168,Proximal phalanx of left third toe,Appendicular,Foot phalanges,lower,FJ3311,Present
+169,Middle phalanx of left third toe,Appendicular,Foot phalanges,lower,FJ3294,Present
+170,Distal phalanx of left third toe,Appendicular,Foot phalanges,lower,FJ3180,Present
+171,Proximal phalanx of left fourth toe,Appendicular,Foot phalanges,lower,FJ3312,Present
+172,Middle phalanx of left fourth toe,Appendicular,Foot phalanges,lower,FJ3295,Present
+173,Distal phalanx of left fourth toe,Appendicular,Foot phalanges,lower,FJ3181,Present
+174,Proximal phalanx of left fifth toe,Appendicular,Foot phalanges,lower,FJ3315,Present
+175,Middle phalanx of left fifth toe,Appendicular,Foot phalanges,lower,FJ3298,Present
+176,Distal phalanx of left fifth toe,Appendicular,Foot phalanges,lower,FJ3185,Present
+177,Right femur,Appendicular,Thigh and leg,lower,FJ3365,Present
+178,Right patella,Appendicular,Thigh and leg,lower,FJ3381,Present
+179,Right tibia,Appendicular,Thigh and leg,lower,FJ3387,Present
+180,Right fibula,Appendicular,Thigh and leg,lower,FJ3366,Present
+181,Right talus,Appendicular,Tarsals,lower,FJ3385,Present
+182,Right calcaneus,Appendicular,Tarsals,lower,FJ3360,Present
+183,Right navicular,Appendicular,Tarsals,lower,FJ3308,Present
+184,Right cuboid,Appendicular,Tarsals,lower,FJ3364,Present
+185,Right medial cuneiform,Appendicular,Tarsals,lower,FJ3377,Present
+186,Right intermediate cuneiform,Appendicular,Tarsals,lower,FJ3370,Present
+187,Right lateral cuneiform,Appendicular,Tarsals,lower,FJ3373,Present
+188,Right metatarsal 1,Appendicular,Metatarsals,lower,FJ3351,Present
+189,Right metatarsal 2,Appendicular,Metatarsals,lower,FJ3353,Present
+190,Right metatarsal 3,Appendicular,Metatarsals,lower,FJ3355,Present
+191,Right metatarsal 4,Appendicular,Metatarsals,lower,FJ3357,Present
+192,Right metatarsal 5,Appendicular,Metatarsals,lower,FJ3359,Present
+193,Proximal phalanx of right great toe (hallux),Appendicular,Foot phalanges,lower,FJ3310,Present
+194,Distal phalanx of right great toe (hallux),Appendicular,Foot phalanges,lower,FJ3192,Present
+195,Proximal phalanx of right second toe,Appendicular,Foot phalanges,lower,FJ3319,Present
+196,Middle phalanx of right second toe,Appendicular,Foot phalanges,lower,FJ3300,Present
+197,Distal phalanx of right second toe,Appendicular,Foot phalanges,lower,FJ3189,Present
+198,Proximal phalanx of right third toe,Appendicular,Foot phalanges,lower,FJ3320,Present
+199,Middle phalanx of right third toe,Appendicular,Foot phalanges,lower,FJ3301,Present
+200,Distal phalanx of right third toe,Appendicular,Foot phalanges,lower,FJ3190,Present
+201,Proximal phalanx of right fourth toe,Appendicular,Foot phalanges,lower,FJ3321,Present
+202,Middle phalanx of right fourth toe,Appendicular,Foot phalanges,lower,FJ3302,Present
+203,Distal phalanx of right fourth toe,Appendicular,Foot phalanges,lower,FJ3191,Present
+204,Proximal phalanx of right fifth toe,Appendicular,Foot phalanges,lower,FJ3324,Present
+205,Middle phalanx of right fifth toe,Appendicular,Foot phalanges,lower,FJ3305,Present
+206,Distal phalanx of right fifth toe,Appendicular,Foot phalanges,lower,FJ3195,Present

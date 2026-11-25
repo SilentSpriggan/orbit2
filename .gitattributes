@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.svg text eol=lf
+*.png binary
+*.woff2 binary
+# Preserve the supplied historical reference CSVs byte-for-byte, including CRLF/BOM.
+src/modules/evidence/data/*.csv -text whitespace=cr-at-eol
+
+ui/assets/ALL_NUMERIC_METRICS_LONG.csv -text whitespace=cr-at-eol

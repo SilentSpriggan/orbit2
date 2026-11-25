@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+*.local
+*.tsbuildinfo
+.vite
+.DS_Store
+Thumbs.db
+.env.*.local
+coverage
+
+# local server
+__pycache__/
+server/.env
+server/certs/
+server/data/runtime/
+.venv/

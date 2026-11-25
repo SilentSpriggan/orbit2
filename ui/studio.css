@@ -1,0 +1,280 @@
+/* ORBIT 1.17 — quiet working surfaces, a tactile 3D companion. */
+:root {
+  --paper: #f3f5f6;
+  --ink: #172b38;
+  --muted: #596975;
+  --line: #dfe5e8;
+  --control-line: #cbd5dc;
+  --blue: #245d82;
+  --mission-blue-deep: #19486a;
+  --soft-blue: #e9f0f5;
+  --radius: 12px;
+  --shadow: none;
+  --studio-ease: cubic-bezier(.16, 1, .3, 1);
+}
+body { background: var(--paper); -webkit-font-smoothing: antialiased; }
+::selection { color: #132d42; background: #cce0ee; }
+input, textarea { caret-color: var(--blue); }
+* { scrollbar-color: #b7c4cc transparent; scrollbar-width: thin; }
+a { text-underline-offset: .2em; }
+:where(button, a, input, select, textarea, summary):focus-visible {
+  outline: 3px solid #417ba4;
+  outline-offset: 3px;
+}
+button:disabled { cursor: not-allowed; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* The shell stays out of the way of the record. */
+.sidebar { padding: 24px 14px 16px; background: #fafbfb; }
+.sidebar .brand { padding: 0 10px 18px; gap: 11px; font-size: 22px; letter-spacing: .07em; }
+.sidebar .brand-symbol { width: 32px; color: var(--blue); }
+.sidebar .brand small { font-size: 12px; letter-spacing: .06em; margin-top: 4px; }
+.sidebar .main-nav { margin-top: 4px; gap: 4px; }
+.main-nav a { min-height: 42px; padding: 10px 12px; border-radius: 8px; }
+.main-nav a.active { background: #e5edf3; box-shadow: none; }
+.main-nav a.active .nav-copy strong { color: #204f70; font-weight: 650; }
+.main-nav .nav-copy strong { font-size: 13px; }
+.main-nav a > i { width: 18px; height: 18px; }
+.nav-group { margin-top: 10px; padding-top: 10px; }
+.nav-group summary { min-height: 40px; color: var(--muted); font-weight: 550; padding: 8px 12px; }
+.nav-group summary i { opacity: .7; }
+.sidebar-bottom { padding-top: 12px; }
+.sidebar .rail-settings { min-height: 42px; padding: 9px 12px; }
+.sidebar .local-status { font-size: 12px; letter-spacing: 0; padding: 10px 12px 0; }
+.topbar { height: 72px; background: #ffffff; padding: 0 32px; gap: 16px; }
+.feature-finder-trigger { min-height: 40px; border: 1px solid var(--line); background: #f7f9fa; padding: 9px 13px; }
+.feature-finder-trigger kbd { color: var(--muted); background: #fff; border: 1px solid var(--line); padding: 2px 5px; border-radius: 4px; }
+.topbar .care-header-response { min-height: 38px; background: #fff; color: #9b463e; border-color: #e5cfc9; border-radius: 8px; }
+.topbar .demo-tag { min-height: 38px; border-radius: 8px; background: #f3f6f8; border-color: transparent; }
+.viewer-tag { border-radius: 8px; }
+main { padding: 32px 36px 48px; max-width: 1560px; }
+.page-heading { gap: 20px; align-items: center; margin-bottom: 26px; }
+.page-heading h1 { font-size: clamp(26px, 2.1vw, 32px); font-weight: 650; letter-spacing: -.03em; line-height: 1.2; }
+.page-heading p { color: var(--muted); font-size: 13px; margin-top: 7px; }
+.heading-actions { gap: 8px; flex-wrap: wrap; }
+.button { min-height: 40px; border-radius: 8px; font-size: 13px; padding: 10px 14px; }
+.button.primary { background: var(--blue); border-color: var(--blue); }
+.button.primary:hover { background: var(--mission-blue-deep); border-color: var(--mission-blue-deep); }
+.text-button { font-size: 12px; min-height: 32px; }
+.button:active:not(:disabled), .companion-mic:active:not(:disabled) { transform: translateY(1px); }
+.panel, .stat-box, .metric-card { border: 1px solid var(--line); border-radius: 12px; box-shadow: none; }
+.panel-head h2 { font-size: 16px; font-weight: 600; letter-spacing: -.02em; }
+.panel-head p { font-size: 12px; line-height: 1.6; color: var(--muted); }
+.panel-head { padding-bottom: 18px; }
+.section-label { margin-top: 28px; margin-bottom: 13px; align-items: baseline; }
+.section-label h2 { font-size: 16px; font-weight: 600; }
+.section-label > span { font-size: 12px; letter-spacing: .03em; color: var(--muted); }
+
+/* One photographic mission surface; the data beneath remains plain. */
+.hero { min-height: 236px; border-radius: 14px; isolation: isolate; background: #112635; }
+.hero-content { padding: 32px; position: relative; z-index: 1; }
+.hero h2 { font-size: clamp(26px, 2.6vw, 36px); line-height: 1.14; font-weight: 550; letter-spacing: -.03em; }
+.hero p { color: #d3dfe7; font-size: 13px; margin-top: 12px; }
+.hero-eyebrow { display: none; }
+.hero-action { gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+.hero-action .button { font-size: 13px; min-height: 42px; padding: 10px 16px; }
+.hero-action .hero-secondary { color: #fff; border-color: #9eaebd; background: #20394be6; }
+.hero-action .hero-routine { min-height: 42px; padding: 0 8px; }
+.hero-photo-caption { font-size: 12px; color: #d1dae1; }
+.metrics-grid { gap: 14px; }
+.metric-card { min-height: 146px; padding: 20px; }
+.metric-top { font-size: 13px; align-items: center; }
+.metric-top i { width: 17px; height: 17px; }
+.metric-value { font-size: 34px; letter-spacing: -.03em; line-height: 1.2; margin-top: 12px; font-weight: 550; }
+.metric-value small { font-size: 13px; letter-spacing: 0; margin-left: 4px; }
+.metric-sub { font-size: 12px; line-height: 1.5; margin-top: 5px; }
+.metric-status { font-size: 12px; }
+.dashboard-grid, .lower-grid { gap: 20px; margin-top: 22px; }
+.routine-item { min-height: 72px; }
+.routine-item-text { font-size: 13px; }
+.routine-item-text small, .routine-time { font-size: 12px; color: var(--muted); }
+.data-table th { padding-block: 14px; font-size: 12px; color: var(--muted); }
+.data-table td { padding-block: 16px; font-size: 13px; }
+.field-input { min-height: 44px; border-radius: 8px; background: #fff; }
+.field { font-size: 13px; }
+.notice, .mode-notice { border-radius: 10px; }
+.notice p { line-height: 1.65; }
+.app-footer { color: var(--muted); font-size: 12px; padding-inline: 36px; }
+
+/* A compact companion opens into a portrait and a focused conversation. */
+.crew-companion {
+  background: #fff;
+  color: var(--ink);
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 12px 44px #152b3e26, 0 2px 8px #152b3e14;
+  isolation: isolate;
+}
+.companion-head { gap: 12px; padding: 9px 12px 9px 9px; }
+.companion-portrait { width: 62px; height: 64px; border: 0; border-radius: 12px; background: #cbd3d5; }
+.companion-launch { color: var(--ink); font-size: 14px; font-weight: 650; gap: 10px; }
+.companion-launch i { color: var(--muted); }
+#assistant-status { color: var(--muted); font-size: 12px; line-height: 1.5; max-width: 24ch; }
+#assistant-status::before { background: #8597a1; }
+.crew-companion[data-connected=true] #assistant-status::before { background: #25816c; }
+.companion-mic { background: var(--blue); border: 0; color: #fff; border-radius: 50%; width: 44px; height: 44px; }
+.companion-mic:hover { background: var(--mission-blue-deep); }
+.companion-portrait-note, .companion-collapse { display: none; }
+.crew-companion[data-expanded=true] {
+  width: min(404px, calc(100vw - 2 * var(--companion-gap)));
+  max-height: calc(100dvh - 2 * var(--companion-gap) - env(safe-area-inset-bottom, 0px));
+  border-radius: 18px;
+}
+.crew-companion[data-expanded=true] .companion-head {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 0 18px 16px;
+}
+.crew-companion[data-expanded=true] .companion-portrait,
+.crew-companion[data-expanded=true]:has(#assistant-avatar-tools[open]) .companion-portrait {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: calc(100% + 36px);
+  height: clamp(150px, 26dvh, 262px);
+  margin: 0 -18px 2px;
+  border-radius: 0;
+}
+.crew-companion[data-expanded=true] .companion-portrait-note {
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  color: #324a59;
+  font-size: 12px;
+  pointer-events: none;
+}
+.crew-companion[data-expanded=true] .companion-identity { grid-column: 1; grid-row: 2; }
+.crew-companion[data-expanded=true] .companion-launch { font-size: 17px; letter-spacing: -.02em; }
+.crew-companion[data-expanded=true] .companion-launch i { display: none; }
+.crew-companion[data-expanded=true] .companion-mic,
+.crew-companion[data-expanded=true] .companion-end { grid-row: 2; }
+.crew-companion[data-expanded=true] .companion-collapse {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #2c4252;
+  background: #f9fbfbe6;
+  border: 1px solid #b6c3cb;
+}
+.companion-collapse i { width: 17px; height: 17px; }
+.companion-loading { color: #38515f; font-size: 12px; padding: 6px; }
+.companion-room { height: min(470px, 49dvh); background: #fff; border-top: 1px solid var(--line); }
+.companion-room .assistant-content { padding: 0 20px; scrollbar-gutter: stable; }
+.companion-connect { align-items: center; gap: 16px; padding-block: 10px; font-size: 12px; line-height: 1.5; }
+.companion-connect span { max-width: 22ch; }
+.companion-connect .text-button { display: inline-flex; align-items: center; gap: 5px; flex: none; }
+.companion-connect .text-button i { width: 14px; height: 14px; }
+.companion-room .assistant-context { padding-block: 13px; }
+.companion-room .assistant-context small { font-size: 12px; letter-spacing: .06em; }
+.companion-room .assistant-context strong { font-size: 13px; margin-top: 3px; }
+.assistant-sharing { font-size: 12px; line-height: 1.6; padding-top: 10px; }
+.assistant-transcript { padding-top: 20px; }
+.assistant-empty h3 { font-size: 20px; line-height: 1.25; font-weight: 550; letter-spacing: -.03em; max-width: 18ch; }
+.assistant-empty p { margin-top: 10px; max-width: 36ch; line-height: 1.65; }
+.companion-suggestions { display: grid; gap: 0; margin: 16px 0 8px; border-top: 1px solid var(--line); }
+.companion-suggestions button { display: flex; align-items: center; justify-content: space-between; text-align: left; gap: 14px; min-height: 44px; padding: 10px 0; color: var(--blue); font-size: 13px; background: transparent; border-bottom: 1px solid var(--line); }
+.companion-suggestions button i { width: 16px; height: 16px; }
+.companion-suggestions button:hover { color: var(--mission-blue-deep); }
+.assistant-message { padding: 13px 14px; background: #f2f5f6; border: 0; border-radius: 11px; margin-bottom: 14px; }
+.assistant-message[data-role=user] { margin-left: 24px; background: #e9f0f5; border: 0; }
+.assistant-message small { font-size: 12px; color: #4a6475; letter-spacing: .06em; }
+.assistant-message p { font-size: 13px; line-height: 1.65; }
+.companion-room .assistant-command-help { padding: 9px 0; }
+.companion-room .assistant-command-help summary { color: #334c5d; min-height: 32px; font-size: 12px; }
+.companion-personas { display: flex; gap: 4px !important; border: 1px solid var(--line); border-radius: 8px; padding: 3px; background: #f5f7f8; }
+.companion-personas button { flex: 1; border: 0; background: transparent; font-size: 12px; border-radius: 5px; min-height: 36px; }
+.companion-personas button[aria-pressed=true] { background: #fff; color: #204f70; box-shadow: 0 1px 4px #172b3812; }
+.companion-render-settings { display: grid !important; grid-template-columns: 1fr 1fr; align-items: end; gap: 10px !important; }
+.companion-render-settings label { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
+.companion-render-settings select, .companion-render-settings > button { min-width: 0; min-height: 38px; padding: 8px; font: inherit; font-size: 12px; color: var(--ink); background: #fff; border: 1px solid var(--control-line); border-radius: 7px; }
+.companion-render-settings > button[aria-pressed=true] { color: var(--blue); background: var(--soft-blue); }
+.companion-motion { display: grid !important; grid-template-columns: 1fr 1fr; gap: 8px !important; }
+.companion-motion button { font-size: 12px; min-height: 38px; padding: 8px; border-radius: 7px; }
+.companion-motion button:disabled { opacity: .5; }
+.companion-room .assistant-bottom { padding: 14px 16px 12px; background: #fafbfc; }
+.assistant-compose { align-items: stretch; gap: 8px; }
+.assistant-compose textarea { border: 1px solid var(--control-line); border-radius: 9px; background: #fff; min-height: 46px; height: 46px; font-size: 13px; padding: 12px; }
+.assistant-compose textarea::placeholder { color: #64727f; opacity: 1; }
+.assistant-compose .button { border-radius: 9px; min-height: 46px; font-size: 12px; }
+.companion-room .assistant-foot { gap: 8px; flex-wrap: wrap; margin-top: 9px; }
+.companion-room .assistant-foot > span { font-size: 12px; }
+.assistant-emergency { min-height: 26px; font-size: 12px; }
+.assistant-error { font-size: 12px; border-radius: 8px; }
+.assistant-privacy button { border-radius: 8px; }
+
+/* A single authored opening; routine feedback stays fast and quiet. */
+@media (prefers-reduced-motion: no-preference) {
+  .button, .main-nav a, .nav-group summary, .companion-mic, .companion-suggestions button,
+  .companion-personas button, .companion-motion button, .field-input {
+    transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms var(--studio-ease);
+  }
+  .crew-companion[data-expanded=true] { animation: studio-open 240ms var(--studio-ease) both; transform-origin: bottom right; }
+  .crew-companion[data-corner=left][data-expanded=true] { transform-origin: bottom left; }
+  .companion-suggestions button i { transition: transform 180ms var(--studio-ease); }
+  .companion-suggestions button:hover i { transform: translateX(3px); }
+  .nav-group summary i { transition: transform 180ms var(--studio-ease); }
+  @keyframes studio-open { from { opacity: .65; transform: translateY(8px) scale(.985); } to { opacity: 1; transform: none; } }
+}
+
+@media (max-width: 1099px) {
+  .topbar { padding-inline: 22px; gap: 10px; }
+  main { padding: 26px 24px 40px; }
+  .sidebar { padding-top: 24px; }
+  .page-heading { align-items: flex-start; }
+  .hero-content { padding: 28px; }
+}
+@media (max-width: 759px) {
+  .topbar { height: 64px; padding-inline: 12px; gap: 8px; }
+  .topbar .feature-finder-trigger { min-width: 40px; width: 40px; min-height: 40px; padding: 10px; }
+  .topbar-actions { gap: 6px; }
+  .topbar .care-header-response { min-height: 40px; }
+  .topbar .demo-tag { font-size: 12px; padding: 6px 8px; }
+  main { padding: 24px 16px 34px; }
+  .page-heading { gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .page-heading h1 { font-size: 26px; }
+  .heading-actions .button { min-height: 40px; font-size: 12px; padding: 9px 11px; }
+  .hero { min-height: 250px; }
+  .hero-content { padding: 25px 22px; }
+  .hero h2 { font-size: 30px; }
+  .hero-action { gap: 8px; margin-top: 20px; }
+  .hero-action .button { font-size: 12px; padding-inline: 12px; }
+  .hero-action .hero-routine { padding-left: 0; }
+  .hero-photo-caption { display: none; }
+  .metrics-grid { gap: 10px; }
+  .metric-card { min-height: 144px; padding: 16px; }
+  .metric-value { font-size: 30px; }
+  .metric-sub { max-width: 100%; }
+  .metric-card .sparkline { display: none; }
+  .section-label { gap: 12px; flex-wrap: wrap; }
+  .section-label > span { font-size: 12px; }
+  .dashboard-grid, .lower-grid { gap: 16px; }
+  .companion-head { gap: 10px; }
+  .companion-portrait { width: 52px; height: 54px; }
+  .companion-launch { font-size: 13px; }
+  #assistant-status { font-size: 12px; }
+  .crew-companion[data-expanded=true] .companion-portrait,
+  .crew-companion[data-expanded=true]:has(#assistant-avatar-tools[open]) .companion-portrait { height: clamp(136px, 23dvh, 200px); }
+  .companion-room { height: min(460px, 51dvh); }
+  .companion-room .assistant-compose textarea { font-size: 16px; }
+  .companion-collapse { min-width: 44px; min-height: 44px; }
+  .app-footer { padding-inline: 16px; }
+}
+@media (max-height: 600px) {
+  .crew-companion[data-expanded=true] .companion-portrait,
+  .crew-companion[data-expanded=true]:has(#assistant-avatar-tools[open]) .companion-portrait { height: 92px; }
+  .crew-companion[data-expanded=true] .companion-head { padding-bottom: 9px; gap: 6px; }
+  .crew-companion[data-expanded=true] .companion-portrait-note { display: none; }
+  .companion-room { height: 52dvh; }
+}
+@media (pointer: coarse) {
+  .button, .main-nav a, .nav-group summary, .sidebar .rail-settings { min-height: 44px; }
+  .companion-personas button, .companion-motion button, .companion-render-settings select,
+  .companion-render-settings > button, .companion-collapse, .companion-room summary { min-height: 44px; }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "ORBIT Crew Health",
+  "short_name": "ORBIT",
+  "description": "Crew health records, measurement guidance, and reference anatomy.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#0f2345",
+  "icons": [
+    { "src": "assets/brand/orbit-mark-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "assets/brand/orbit-mark-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

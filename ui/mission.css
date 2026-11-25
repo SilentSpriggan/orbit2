@@ -1,0 +1,260 @@
+/* Crew status, mission risks, supplies, wellbeing, exercise, emergency checklists and the flight surgeon report. */
+.mission-pill{display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:999px;font-size:12px;font-weight:600;line-height:1.3;white-space:nowrap}
+.mission-pill i{display:inline-flex;width:13px;height:13px}
+.mission-pill svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2}
+.mission-pill.urgent{background:var(--urgent-tint);color:var(--urgent-text)}
+.mission-pill.review{background:var(--review-tint);color:var(--review-text)}
+.mission-pill.due{background:var(--paper);color:var(--muted)}
+.mission-pill.clear{background:var(--clear-tint);color:var(--clear-text)}
+.mission-pill.historical{background:var(--paper);color:var(--muted)}
+
+.mission-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.mission-tiles .stat-box strong{display:block;font-size:24px;line-height:1.25;overflow-wrap:anywhere}
+.mission-panel{margin-top:16px;padding-bottom:16px}
+.mission-panel .table-wrap,.mission-panel>.mission-reasons,.mission-panel>.mission-alerts,.mission-panel>.mission-clear-note,.mission-panel>svg{margin-left:20px;margin-right:20px;width:auto}
+.mission-panel>svg{display:block}
+.mission-clear-note{color:var(--muted);font-size:13px;line-height:1.5;margin:0}
+.mission-strip{margin-top:-10px}
+
+.mission-priority{display:flex;align-items:center;gap:12px;padding:14px 16px;margin-bottom:16px;border-radius:var(--radius);border:1px solid var(--review-line);background:#fdf8ee}
+.mission-priority.urgent{border-color:#f3c6c1;background:#fdf1ef}
+.mission-priority>i{display:inline-flex;flex:none;width:20px;height:20px}
+.mission-priority svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8}
+.mission-priority>div{flex:1;min-width:0}
+.mission-priority strong{display:block;font-size:14px;line-height:1.4}
+.mission-priority p{margin:4px 0 0;font-size:13px;line-height:1.5}
+.mission-setup{display:flex;align-items:center;gap:12px;padding:12px 16px;margin-bottom:16px;border-radius:var(--radius);background:var(--soft-blue)}
+.mission-setup>i{display:inline-flex;width:18px;height:18px;flex:none}
+.mission-setup svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
+.mission-setup p{flex:1;margin:0;font-size:13px}
+
+.mission-crew-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}
+.mission-crew-card{display:flex;flex-direction:column;gap:12px;padding:16px;border-left-width:3px}
+.mission-crew-card.urgent{border-left-color:#c23a2e}
+.mission-crew-card.review{border-left-color:#b9791f}
+.mission-crew-card.historical{border-left-style:dashed}
+.mission-crew-top{display:flex;align-items:center;gap:10px}
+.mission-crew-top>div{flex:1;min-width:0}
+.mission-crew-top h3{margin:0;font-size:15px}
+.mission-crew-top p{margin:0;font-size:12px;color:var(--muted)}
+.mission-crew-values{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px 0;border-block:1px solid var(--line)}
+.mission-crew-values span{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}
+.mission-crew-values b{font-size:16px;color:var(--ink)}
+.mission-crew-values small{font-size:12px}
+.mission-reasons{margin:0;padding-left:18px;font-size:13px;line-height:1.45;display:grid;gap:5px}
+.mission-more{margin:0;font-size:12px;color:var(--muted)}
+.mission-crew-foot{margin-top:auto;display:flex;flex-direction:column;gap:6px}
+.mission-crew-foot>small{color:var(--muted);font-size:12px}
+.mission-crew-foot>div{display:flex;justify-content:space-between;gap:12px}
+
+.mission-alerts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.mission-alert{display:flex;align-items:flex-start;gap:10px}
+.mission-alert p{margin:0;font-size:13px;line-height:1.5}
+
+.mission-risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.mission-risk{display:flex;flex-direction:column;gap:8px;padding:16px}
+.mission-risk-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 8px}
+.mission-risk-top h3{margin:0;font-size:14px;white-space:nowrap}
+.mission-risk-value{font-size:28px;font-weight:700;line-height:1.2}
+.mission-risk-value small{margin-left:5px;font-size:13px;font-weight:500;color:var(--muted)}
+.mission-risk p{margin:0;font-size:13px;line-height:1.5}
+.mission-risk>small{font-size:12px;color:var(--muted)}
+.mission-meter{position:relative;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.mission-meter span{position:absolute;inset:0 auto 0 0;border-radius:4px}
+.mission-meter .projected{background:#a9c5e6}
+.mission-meter .now{background:var(--blue)}
+.mission-meter-key{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--muted)}
+.mission-row-actions{white-space:nowrap}
+.mission-row-actions .text-button+.text-button{margin-left:12px}
+
+.mission-spark-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.mission-spark{padding:14px 16px}
+.mission-spark>div{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.mission-spark h3{margin:0;font-size:13px;font-weight:600}
+.mission-spark strong{font-size:18px}
+.mission-spark strong small{margin-left:3px;font-size:12px;font-weight:500;color:var(--muted)}
+.mission-spark svg{display:block;width:100%;height:auto;margin-top:6px;overflow:visible}
+.mission-spark path{fill:none;stroke:var(--blue);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.mission-spark .dot{fill:var(--blue);stroke:#fff;stroke-width:2}
+.mission-spark .hit{fill:transparent}
+.mission-spark p{margin-top:8px}
+
+.mission-bars{height:auto}
+.mission-bars .bar{fill:var(--blue)}
+.mission-bars .axis{stroke:var(--line)}
+.mission-bars .target{stroke:var(--ink);stroke-width:1.2;stroke-dasharray:5 4}
+.mission-bars text{fill:var(--muted);font-size:12px}
+.mission-bars .hit{fill:transparent}
+.mission-bars .hit:hover{fill:#121c2b0a}
+
+.mission-checklists{margin:16px 0;padding:14px;border:1px solid var(--line);border-radius:var(--radius);display:grid;gap:10px}
+.mission-checklists h3{margin:0;font-size:15px}
+.mission-checklist-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.mission-checklist-grid button{min-height:46px;padding:9px 10px;border:1px solid var(--control-line);border-radius:var(--radius);background:#fff;color:var(--ink);font:600 13px var(--sans);cursor:pointer;text-align:left}
+.mission-checklist-grid button:hover{border-color:var(--blue)}
+.mission-checklist-grid .suggested{grid-column:1/-1;border-color:#c23a2e;background:#fdf1ef}
+.mission-checklist-grid small{display:block;margin-top:2px;font-size:12px;font-weight:500;color:var(--urgent-text)}
+.mission-resume{display:flex;align-items:center;gap:8px;width:100%;padding:10px 12px;border:0;border-radius:var(--radius);background:#c23a2e;color:#fff;font:600 13px var(--sans);cursor:pointer;text-align:left}
+.mission-resume i{display:inline-flex;width:16px;height:16px}
+.mission-resume svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2}
+
+.mission-steps{list-style:none;margin:14px 0;padding:0;display:grid;gap:6px}
+.mission-steps button{display:grid;grid-template-columns:24px 1fr auto;gap:10px;align-items:start;width:100%;min-height:44px;padding:10px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink);font:14px/1.45 var(--sans);cursor:pointer;text-align:left}
+.mission-steps button:hover{border-color:var(--blue)}
+.mission-steps button.done{background:#f0f8f5;border-color:#bfe0d6}
+.mission-step-box{display:grid;place-items:center;width:22px;height:22px;border:1.5px solid #b8c1cc;border-radius:6px}
+.mission-step-box i{display:none;width:14px;height:14px}
+.mission-step-box svg{width:14px;height:14px;fill:none;stroke:#fff;stroke-width:3}
+.done .mission-step-box{background:var(--clear-text);border-color:var(--clear-text)}
+.done .mission-step-box i{display:inline-flex}
+.mission-steps small{font-size:12px;color:var(--muted);white-space:nowrap}
+
+.flight-report{font-size:13px;line-height:1.5}
+.flight-report header{display:grid;gap:2px;padding-bottom:12px;border-bottom:2px solid var(--ink);color:var(--muted)}
+.flight-report header strong{font-size:17px;color:var(--ink)}
+.flight-report section{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.flight-report h3{margin:0 0 4px;font-size:13px}
+.flight-report ul{margin:0;padding:0;list-style:none;display:grid;gap:2px}
+.flight-report li{white-space:pre-wrap}
+.flight-report footer{padding-top:12px;font-size:12px;color:var(--muted)}
+
+#main .mission-setup strong{font-weight:700}
+
+.mission-research-heading{margin:28px 0 6px;font-size:15px;font-weight:600;color:var(--ink)}
+.mission-research-context{margin-bottom:20px;color:var(--muted);font-size:13px;line-height:1.55}
+.mission-research-context p{max-width:72ch;margin:0;text-wrap:pretty}
+.mission-research-context details{margin-top:6px}
+.mission-research-context summary{width:fit-content;color:var(--blue);font-weight:600;cursor:pointer}
+.mission-research-context details p{margin-top:8px}
+.mission-research-tools{display:grid;gap:14px;margin-bottom:16px}
+.mission-research-search label{display:block;margin-bottom:6px;font-size:13px;font-weight:600}
+.mission-research-search>div{display:flex;flex-wrap:wrap;gap:8px}
+.mission-research-search .field-input{flex:1 1 200px;min-width:0}
+.mission-research-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.mission-research-tabs a{padding:7px 12px;border:1px solid var(--control-line);border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:600;text-decoration:none}
+.mission-research-tabs .active{border-color:var(--blue);background:var(--soft-blue);color:var(--blue)}
+/* Hand-offs to the onboard library show only while its model can answer. */
+.mission-ask-about,.mission-ask-search{display:none}
+[data-onboard-ready] .mission-ask-about,[data-onboard-ready] .mission-ask-search:not([hidden]){display:inline-flex}
+.mission-ask-about{margin-top:8px}
+.mission-ask-search{margin-top:8px}
+.mission-research-more{margin:-6px 0 12px}
+.mission-research-more:empty{display:none}
+.mission-research-status{margin:0 0 12px;font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.mission-research-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(290px,100%),1fr));gap:14px}
+.mission-evidence{display:flex;flex-direction:column;gap:9px;padding:16px;min-width:0}
+.mission-evidence-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 10px}
+.mission-evidence-top h3{margin:0;font-size:15px}
+.mission-evidence p{margin:0;font-size:13px;line-height:1.55;text-wrap:pretty}
+.mission-evidence p.mission-evidence-topic{font-size:12px;color:var(--muted)}
+.mission-evidence-watch{padding-top:8px;border-top:1px solid var(--line)}
+.mission-evidence-apa{font-size:12px;color:var(--muted)}
+.mission-evidence-apa summary{cursor:pointer;color:var(--blue)}
+.mission-evidence-apa p{margin:6px 0 0;padding-left:1.5em;text-indent:-1.5em;overflow-wrap:anywhere}
+.mission-evidence-foot{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:8px}
+.mission-evidence-foot>div{display:grid;gap:3px}
+.mission-evidence-foot a:not(.text-button){display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--blue)}
+.mission-evidence-foot i{display:inline-flex;width:12px;height:12px}
+.mission-evidence-foot svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
+.mission-evidence-foot>small{font-size:12px;color:var(--muted)}
+
+.mission-skin-daily{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;margin-bottom:6px}
+.mission-skin-daily h2{margin:0;font-size:17px}
+.mission-skin-daily p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.mission-skin-answers{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mission-skin-week{display:grid;grid-template-columns:repeat(7,minmax(0,36px));gap:6px;max-width:100%}
+.mission-skin-week span{display:grid;justify-items:center;gap:3px}
+.mission-skin-week i{display:grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--paper);color:var(--muted);font:700 13px var(--sans)}
+.mission-skin-week .clear i{background:var(--clear-tint);color:var(--clear-text)}
+.mission-skin-week .change i{background:var(--review-tint);color:var(--review-text)}
+.mission-skin-week small{font-size:12px;color:var(--muted)}
+.mission-wound-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:14px}
+.mission-wound{display:flex;flex-direction:column;gap:10px;padding:16px;border-left-width:3px;min-width:0}
+.mission-wound.urgent{border-left-color:#c23a2e}
+.mission-wound.review{border-left-color:#b9791f}
+.mission-wound-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.mission-wound-top h3{margin:0;font-size:15px}
+.mission-wound-top p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.mission-wound-size strong{display:block;font-size:22px}
+.mission-wound-size small{font-size:12px;color:var(--muted)}
+.mission-wound-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto}
+.mission-photo-row{display:flex;flex-wrap:wrap;gap:6px}
+.mission-photo-row:empty{display:none}
+.mission-photo-row button{padding:0;border:1px solid var(--line);border-radius:6px;background:#fff;cursor:pointer;overflow:hidden}
+.mission-photo-row img{display:block;width:72px;height:54px;object-fit:cover}
+.mission-photo-row small{display:block;padding:2px;font-size:12px;color:var(--muted)}
+.mission-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.mission-chip input{position:absolute;opacity:0}
+.mission-chip span{display:block;padding:7px 11px;border:1px solid var(--control-line);border-radius:999px;background:#fff;font-size:13px;font-weight:500;cursor:pointer}
+.mission-chip input:checked+span{border-color:var(--blue);background:var(--soft-blue);color:var(--blue);font-weight:600}
+.mission-chip input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+
+#modal .modal-foot{position:sticky;bottom:0;z-index:2;background:#fff}
+
+@media(max-width:759px){
+ .mission-priority,.mission-setup{flex-direction:column;align-items:stretch}
+ .mission-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .mission-panel .table-wrap,.mission-panel>.mission-reasons,.mission-panel>.mission-alerts,.mission-panel>.mission-clear-note,.mission-panel>svg{margin-left:14px;margin-right:14px}
+ .mission-alert{flex-direction:column;gap:4px}
+ .mission-steps button{grid-template-columns:24px 1fr}
+ .mission-steps small{grid-column:2}
+}
+@media print{
+ body>*:not(#modal){display:none!important}
+ html,body{background:#fff}
+ #modal{position:static;display:block;width:auto;max-width:none;max-height:none;overflow:visible;margin:0;padding:0;border:0;box-shadow:none}
+ #modal::backdrop{display:none}
+ #modal .modal-head,#modal .modal-foot{display:none!important}
+ #modal .modal-body{overflow:visible;max-height:none;padding:0}
+}
+
+/* Who is using the shared device, and what the rest of the crew sees of someone's wellbeing. */
+.viewer-tag{display:inline-flex;align-items:center;gap:7px;min-height:38px;padding:6px 11px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink);font:500 12px var(--sans);white-space:nowrap;cursor:pointer}
+.viewer-tag:hover{background:var(--paper)}
+.viewer-tag i{display:inline-flex;width:15px;height:15px;color:var(--blue)}
+.viewer-tag svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8}
+.viewer-tag-label{color:var(--muted)}
+.viewer-tag-name{font-weight:600}
+.viewer-tag-short{display:none;font-weight:600}
+.viewer-tag.unset{border-color:#e9c98f;background:#fdf8ee}
+.viewer-tag.unset .viewer-tag-name{color:var(--review-text)}
+.viewer-list{display:grid;gap:8px;margin-bottom:14px}
+.viewer-option{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:10px 14px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;color:var(--ink);text-align:left;cursor:pointer}
+.viewer-option:hover{background:var(--paper)}
+.viewer-option.selected{border-color:var(--blue);background:var(--soft-blue)}
+.viewer-option>span:nth-child(2){flex:1;min-width:0}
+.viewer-option strong{display:block;font-size:14px}
+.viewer-option small{display:block;color:var(--muted);font-size:12px}
+.viewer-role{flex:none;padding:3px 9px;border-radius:999px;background:var(--soft-blue);color:var(--blue);font-size:12px;font-weight:600}
+.viewer-field-help{display:block;margin-top:6px;color:var(--muted);font-size:12px;line-height:1.5;font-weight:400}
+.hidden-value{display:inline-flex;align-items:center;gap:4px;color:var(--muted);font-size:12px;white-space:nowrap}
+.hidden-value i{display:inline-flex;width:12px;height:12px}
+.hidden-value svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2}
+.wellbeing-hidden>div{flex:1;min-width:0}
+.wellbeing-hidden strong{display:block;font-size:14px;line-height:1.4}
+.wellbeing-hidden p{margin:4px 0 0;line-height:1.5}
+.wellbeing-hidden .button{flex:none}
+@media(max-width:759px){.viewer-tag{min-height:32px;padding:5px 8px}.wellbeing-hidden{flex-wrap:wrap}}
+/* Reflection prompt in the daily check-in, and the crew member's own reflections. */
+.mission-reflect-prompt{margin:4px 0 8px;font-size:14px;color:var(--ink)}
+.mission-reflect-prompt .text-button{margin-left:6px;font-size:13px}
+.mission-reflect-note{display:flex;gap:8px;align-items:flex-start;color:var(--muted)}
+.mission-reflect-note i{width:16px;height:16px;margin-top:2px}
+.mission-reflect-list{margin:0;padding:0 20px 8px;list-style:none}
+.mission-reflect-list li{padding:12px 0;border-top:1px solid var(--line)}
+.mission-reflect-list span{display:block;font-size:12px;color:var(--muted)}
+.mission-reflect-list b{display:block;margin-top:2px;font-size:13px;font-weight:600}
+.mission-reflect-list p{margin-top:4px;font-size:14px;line-height:1.6;white-space:pre-wrap}
+.mission-reflect-why{padding:4px 20px 18px}
+.mission-reflect-why>p{font-size:13px;line-height:1.6;color:var(--muted)}
+.mission-reflect-why a{color:var(--blue)}
+/* Exercise check before and after a workout. */
+.mission-check>summary{width:fit-content;cursor:pointer;font-weight:600;color:var(--blue)}
+.mission-check>summary small{font-weight:400;color:var(--muted)}
+.mission-check .form-help{margin:8px 0 12px}
+.mission-check .form-help a{color:var(--blue)}
+.mission-check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.mission-check-side{display:grid;gap:10px;margin:0;padding:12px;border:1px solid var(--line);border-radius:8px}
+.mission-check-side legend{padding:0 4px;font-size:13px;font-weight:600}
+.mission-check-cell{min-width:150px;font-size:13px;line-height:1.6;white-space:nowrap}
+@media(max-width:620px){.mission-check-grid{grid-template-columns:1fr}.mission-reflect-list,.mission-reflect-why{padding-inline:16px}}

@@ -1,0 +1,157 @@
+/* Visual theme and colour tokens. Loaded after the older stylesheets, which now read these tokens; see DESIGN.md. */
+
+body{font-variant-numeric:tabular-nums}
+.assistant-avatar-caption{padding:4px 8px;border-radius:var(--radius);background:var(--deep-orbit-navy)}
+.assistant-avatar-caption span{color:#fff}
+h1,h2,h3{letter-spacing:-.01em}
+
+/* Sidebar */
+.sidebar{background:#fff;color:var(--ink);border-right:1px solid var(--line);padding:20px 12px 14px}
+.brand{color:var(--ink);font-size:18px;font-weight:700;letter-spacing:.08em;gap:9px;padding:0 10px}
+.brand small,.rail-rule,.mission-patch,.nav-copy small,.main-nav a.active:before,.active .nav-mark,.topbar-location .mono,.topbar-location .slash{display:none}
+.brand-symbol{width:26px}
+.brand-symbol svg{stroke:var(--ink)}
+.brand-symbol svg path{stroke:var(--blue)}
+.main-nav{margin-top:18px;gap:2px}
+.main-nav .nav-caption{margin:18px 10px 6px;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--muted)}
+.main-nav a{min-height:38px;padding:8px 10px;gap:10px;color:var(--muted);border-radius:var(--radius)}
+.main-nav a:hover{background:var(--paper);color:var(--ink)}
+.main-nav a.active{background:var(--soft-blue);color:var(--blue)}
+.nav-copy strong{font-size:13px;font-weight:500;color:var(--ink)}
+.main-nav .active .nav-copy strong{color:var(--blue);font-weight:600}
+.nav-count,.nav-new{border:0;background:var(--paper);color:var(--muted);font-size:12px;padding:1px 7px;border-radius:999px}
+.sidebar-bottom{padding-top:14px;border-top:1px solid var(--line)}
+.rail-settings{color:var(--muted);padding:8px 10px;font-size:13px;border-radius:var(--radius)}
+.rail-settings:hover{background:var(--paper);color:var(--ink)}
+.local-status{color:var(--muted);font-size:12px;padding:6px 10px 0;letter-spacing:0}
+.local-status small{display:none}
+
+/* Top bar and page frame */
+.topbar{height:60px;padding:0 24px;border-bottom-color:var(--line)}
+.feature-finder-trigger{background:var(--paper);border-color:transparent;font-size:13px;border-radius:var(--radius);min-height:36px}
+.care-header-response,.demo-tag{font-size:12px;border-radius:var(--radius);white-space:nowrap}
+main{padding:28px 32px 40px}
+.page-heading{margin-bottom:22px}
+.page-heading h1{font-size:26px;line-height:1.2;font-weight:700}
+.page-heading p{font-size:14px;margin-top:4px}
+.eyebrow{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.02em}
+.app-footer{border-top-color:var(--line);font-size:12px}
+
+/* Surfaces */
+.panel,.metric-card,.stat-box{border-color:var(--line);box-shadow:var(--shadow)}
+.metric-card{min-height:128px}
+.hero{min-height:188px;border-radius:12px}
+.hero-coordinate{display:none}
+.crew-roster-list{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));grid-auto-flow:row;grid-auto-columns:auto;overflow:visible}
+
+/* Controls */
+.button{font-size:13px;font-weight:600;padding:9px 14px;border-color:var(--control-line);border-radius:var(--radius)}
+.button:hover{background:var(--paper)}
+.button.primary:hover{background:var(--mission-blue-deep)}
+.field-input{font-size:14px;border-color:var(--control-line);border-radius:var(--radius)}
+.field-input:focus{border-color:var(--blue);outline:2px solid #4086d4;outline-offset:0}
+summary:focus-visible{outline:3px solid #4086d4;outline-offset:4px}
+.toast{font-size:13px;border-radius:var(--radius)}
+
+/* Assistant */
+.assistant-panel{border-left-color:var(--line)}
+.assistant-head{padding-bottom:14px}
+.assistant-avatar-label small,.assistant-avatar-caption small{display:none}
+.assistant-avatar-controls{border-top:0;background:#0f1b2d;padding:3px 4px;gap:2px}
+.assistant-avatar-controls button{border-right:0;border-radius:6px;color:#c6d3e2}
+.assistant-avatar-controls button:hover:not(:disabled){background:#1e2f47;color:#fff}
+.assistant-connection-note{font-size:12px;line-height:1.45}
+
+@media(max-width:759px){
+ main{padding:20px 16px 150px}
+ .page-heading h1{font-size:23px}
+ .topbar{padding:0 12px;gap:8px}
+ .feature-finder-trigger span,.feature-finder-trigger kbd{display:none}
+}
+
+small{font-size:max(12px,.83em)}
+/* Type roles. Labels and metadata sit at 12px; short prose and table data read at 13px on the shared iPad. */
+.notice p,.care-overview-strip p,.mode-notice span,.routine-item-text,.observation p,.data-table td,.mission-priority p,.wellbeing-hidden p{font-size:13px}
+.data-table td .small-sub,.routine-item-text small{font-size:12px}
+.notice p,.mission-priority p{max-width:62ch}
+
+/* Callout strips carry their cue in the icon, not a coloured side bar. The crew status card edge is the one status bar. */
+.care-overview-strip{border-radius:var(--radius)}
+.care-strip-icon{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:var(--radius);background:var(--soft-blue);color:var(--blue)}
+.care-strip-icon i,.care-strip-icon svg{width:20px;height:20px}
+
+/* Condition notes are rows inside their panel, not cards inside a card. */
+.condition-list{display:block}
+.condition-card{margin:0;border:0;border-bottom:1px solid var(--line);border-radius:0;box-shadow:none}
+.condition-card.selected{border-color:var(--line);background:#fffbf4;box-shadow:none}
+
+/* Readings and notes inside a panel are parts of that panel, not cards of their own. */
+.system-readings{gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.system-reading{border:0;border-radius:0;padding:12px 16px 12px 0}
+.system-reading+.system-reading{border-left:1px solid var(--line);padding-left:16px}
+.panel .notice{border:0;background:none;padding:12px 0 0;border-top:1px solid var(--line);border-radius:0}
+.detail-block p,.brief-hero p,.references>p{max-width:62ch}
+/* Mission health brief: NASA's named risks and current studies from the challenge resources. */
+.brief-hrp{padding:24px;margin-top:22px}
+.brief-hrp>h2,.brief-hrp>summary h2{margin:8px 0 10px;font-size:20px;font-weight:600;color:var(--ink)}
+.brief-hrp-intro,.brief-hrp-note{max-width:68ch;font-size:13px;line-height:1.6;color:var(--muted)}
+.brief-hrp a{color:var(--blue)}
+.brief-hrp-group{display:flex;align-items:baseline;gap:8px;margin:24px 0 8px;font-size:15px;font-weight:600}
+.brief-hrp-group span,.brief-hrp-studies summary h2 span{font-size:12px;font-weight:600;color:var(--muted)}
+.brief-hrp-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;margin:0;padding:0;list-style:none}
+.brief-hrp-list li{padding:12px 0;border-top:1px solid var(--line)}
+.brief-hrp-list a{font-size:14px;font-weight:600;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.brief-hrp-list a:hover{text-decoration-color:currentColor}
+.brief-hrp-list p{margin-top:4px;font-size:13px;line-height:1.6;color:var(--muted)}
+.brief-hrp-note{margin-top:18px}
+.brief-hrp-studies>summary{cursor:pointer;width:fit-content}
+.brief-hrp-studies>summary h2{display:inline;margin:0}
+.brief-hrp-studies[open]>summary{margin-bottom:10px}
+@media(max-width:700px){.brief-hrp{padding:18px}.brief-hrp-list{grid-template-columns:1fr}}
+/* NASA risks next to an indicator, a body system or an anatomy selection (hrpRiskList in app.js). */
+.hrp-risk-list{margin:6px 0 0;padding:0;list-style:none}
+.hrp-risk-list li{padding:8px 0;border-top:1px solid var(--line)}
+.hrp-risk-list li:first-child{border-top:0;padding-top:2px}
+.hrp-risk-list a{color:var(--blue);font-size:14px;font-weight:600;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.hrp-risk-list a:hover{text-decoration-color:currentColor}
+.hrp-risk-list p{margin-top:3px;font-size:13px;line-height:1.6;color:var(--muted)}
+.hrp-risk-list details{margin-top:4px}
+.hrp-risk-list summary{width:fit-content;font-size:13px;color:var(--muted);cursor:pointer}
+.hrp-risk-list details p{margin-top:6px}
+.hrp-risk-note{margin-top:6px;font-size:12px;color:var(--muted)}
+.hrp-risk-note a{color:var(--blue)}
+.anatomy-hrp{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.detail-block .hrp-risk-list{padding-left:0}.detail-block .hrp-risk-list li{margin:0}
+/* Quoted NASA or CSA sentence behind a pairing, and CSA material. */
+.hrp-quote{margin:4px 0 10px;padding:8px 0 8px 12px;border-left:3px solid var(--control-line)}
+.hrp-quote p{font-size:13px;line-height:1.6;color:var(--ink)}
+.hrp-quote footer{margin-top:4px;font-size:12px;color:var(--muted)}
+.hrp-quote a,.hrp-studies a{color:var(--blue)}
+.hrp-studies{margin-top:6px;font-size:12px;line-height:1.6;color:var(--muted)}
+.hrp-csa-area{margin:4px 0 10px}
+.hrp-csa-area b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.hrp-csa-area p{margin-top:3px;font-size:13px;line-height:1.6;color:var(--muted)}
+.hrp-risk-list .hrp-studies a{font-size:12px;font-weight:400}
+/* NASA facts unlocked by daily tasks (Daily routine). */
+.routine-facts{width:100%;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);text-align:left}
+.routine-facts-bar{height:6px;margin:8px 0 12px;border-radius:999px;background:var(--paper);overflow:hidden}
+.routine-facts-bar span{display:block;height:100%;border-radius:999px;background:var(--blue)}
+.routine-facts .hrp-quote{margin:0 0 8px}
+.routine-facts-empty,.routine-facts-next{font-size:13px;line-height:1.6;color:var(--muted)}
+.facts-list{margin:0;padding:0;list-style:none}
+.facts-list li{display:flex;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.facts-list li:first-child{border-top:0}
+.facts-list li>span{flex:none;font-size:12px;font-weight:600;color:var(--muted);padding-top:2px}
+.facts-list p{font-size:14px;line-height:1.6}
+.facts-list small{display:block;margin-top:4px;font-size:12px;color:var(--muted)}
+.facts-list a{color:var(--blue)}
+/* Mission brief hazard cards: the NASA risks each hazard feeds, and NASA's own hazard page text. */
+.hazard-risks{margin:14px 0 4px;padding-top:12px;border-top:1px solid var(--line)}
+.hazard-risks p{margin:6px 0 0;font-size:13px;line-height:1.6}
+.hazard-risks a,.hazard-nasa a{color:var(--blue);text-decoration:underline;text-decoration-color:transparent;text-underline-offset:3px}
+.hazard-risks a:hover,.hazard-nasa a:hover{text-decoration-color:currentColor}
+.hazard-nasa{margin:8px 0 12px}
+.hazard-nasa>summary{cursor:pointer;width:fit-content;min-height:44px;display:flex;align-items:center;font-size:13px;font-weight:600;color:var(--ink)}
+.hazard-nasa p{margin:0 0 10px;font-size:13px;line-height:1.6;color:var(--muted)}
+.hazard-nasa>a{font-size:13px}
+.brief-compound .brief-hrp-intro{margin:0 0 10px}

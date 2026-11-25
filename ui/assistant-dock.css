@@ -1,0 +1,178 @@
+/* A persistent right-hand workspace, with the character in an open 3D stage. */
+:root { --assistant-width: clamp(336px, 27vw, 390px); --companion-clearance: 24px; --assistant-compact-width: clamp(210px, 17vw, 250px); }
+.app-shell { margin-right: var(--assistant-width); }
+body[data-assistant-expanded=false] .app-shell { margin-right: var(--assistant-compact-width); }
+.app-footer { padding-bottom: 26px; }
+#assistant-panel {
+  inset: 0 0 0 auto;
+  width: var(--assistant-width);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  padding: 0 16px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  animation: none;
+  isolation: auto;
+}
+.companion-dock-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex: none; min-height: 64px; border-bottom: 1px solid var(--line); }
+.companion-tabs { display: flex; gap: 20px; align-self: stretch; }
+.companion-tabs [role=tab] { position: relative; min-height: 44px; padding: 0 1px; font-size: 13px; font-weight: 600; background: transparent; color: var(--muted); }
+.companion-tabs [aria-selected=true] { color: var(--ink); }
+.companion-tabs [aria-selected=true]::after { content: ''; position: absolute; inset: auto 0 -1px; height: 2px; background: var(--blue); }
+#assistant-panel .companion-collapse { position: static; display: grid; place-items: center; flex: none; width: 36px; height: 44px; border: 0; border-radius: 6px; background: transparent; color: var(--muted); }
+#assistant-panel .companion-collapse:hover { color: var(--ink); background: #e6edef; }
+#assistant-panel .companion-head { position: relative; display: grid; grid-template-columns: minmax(0,1fr) auto auto auto auto; gap: 10px; padding: 0 0 15px; }
+#assistant-panel .companion-portrait {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  width: 100%;
+  height: clamp(245px, 37dvh, 420px);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+#assistant-panel .companion-portrait canvas { background: transparent; mask-image: linear-gradient(to bottom, #000 0%, #000 85%, transparent 100%); }
+#assistant-panel .companion-portrait-note { display: block; position: absolute; top: 10px; left: 0; font-size: 11px; color: var(--muted); pointer-events: none; }
+#assistant-panel .companion-identity { grid-column: 1; grid-row: 2; padding-left: 2px; }
+#assistant-panel .companion-launch { font-size: 17px; font-weight: 600; color: var(--ink); }
+#assistant-panel .companion-launch i { display: none; }
+#assistant-panel .companion-mic, #assistant-panel .companion-end { grid-row: 2; }
+#assistant-panel .companion-room { height: auto; min-height: 0; flex: 1; border-top: 1px solid var(--line); background: transparent; }
+#assistant-panel .assistant-content { padding: 0 2px; scrollbar-gutter: auto; }
+#assistant-panel .assistant-bottom { padding: 12px 0 max(16px,env(safe-area-inset-bottom)); background: transparent; }
+#assistant-panel .companion-connect { gap: 10px; }
+#assistant-panel .companion-connect span { font-size: 11px; max-width: 23ch; }
+#assistant-panel .assistant-context { padding-block: 12px; }
+#assistant-panel .assistant-context small { font-size: 10px; }
+#assistant-panel .assistant-sharing { font-size: 11px; }
+#assistant-panel .assistant-transcript { padding-top: 18px; }
+#assistant-panel .assistant-empty h3 { font-size: 22px; }
+#assistant-panel .assistant-empty p { font-size: 13px; }
+#assistant-panel .assistant-foot > span { font-size: 10px; }
+#assistant-panel .assistant-emergency { font-size: 11px; }
+.companion-appearance { min-height: 0; flex: 1; overflow: auto; padding: 0 2px 24px; border-top: 1px solid var(--line); }
+.companion-avatar-choice { min-width: 0; margin: 22px 0 0; padding: 0; border: 0; }
+.companion-avatar-choice legend { padding: 0; font-size: 14px; font-weight: 600; color: var(--ink); }
+.companion-appearance .companion-personas { margin: 14px 0 12px; }
+.companion-personas label { position: relative; flex: 1; min-width: 0; cursor: pointer; }
+.companion-personas label span { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 8px 12px; border-radius: 5px; font-size: 13px; font-weight: 600; color: var(--muted); }
+.companion-personas input:checked + span { background: #fff; color: #204f70; box-shadow: 0 1px 4px #172b3812; }
+.companion-personas input:focus-visible + span { outline: 2px solid var(--blue); outline-offset: 2px; }
+.companion-choice-note { margin: 0; font-size: 12px; line-height: 1.6; color: var(--muted); }
+#assistant-panel[data-expanded=false] { width: var(--assistant-compact-width); padding-inline: 14px; border-left: 0; }
+#assistant-panel[data-expanded=false] .companion-dock-top { min-height: 64px; justify-content: center; border: 0; }
+#assistant-panel[data-expanded=false] .companion-tabs { display: none; }
+#assistant-panel[data-expanded=false] .companion-collapse { visibility: hidden; }
+#assistant-panel[data-expanded=false] .companion-head { display: flex; flex-direction: column; gap: 9px; padding-top: 25px; }
+#assistant-panel[data-expanded=false] .companion-portrait { height: clamp(320px, 44dvh, 420px); }
+#assistant-panel[data-expanded=false] .companion-portrait-note { display: none; }
+#assistant-panel[data-expanded=false] .companion-identity { text-align: center; flex: none; }
+#assistant-panel[data-expanded=false] .companion-launch { display: block; text-align: center; font-size: 16px; line-height: 1.5; }
+#assistant-panel[data-expanded=false] .companion-launch::after { inset: -5px -4px; }
+#assistant-panel[data-expanded=false] #assistant-status { display: none; }
+#assistant-panel[data-expanded=false] .companion-mic { width: 46px; min-width: 46px; height: 46px; }
+
+/* Let the dashboard respond to its actual space beside the assistant. */
+@media (min-width: 1100px) {
+  main { padding: 28px 28px 42px; }
+  .page-heading { flex-wrap: wrap; gap: 14px; }
+  .topbar { padding-inline: 22px; gap: 10px; }
+  .topbar .feature-finder-trigger { min-width: 40px; }
+  .topbar .feature-finder-trigger span, .topbar .feature-finder-trigger kbd { display: none; }
+  .topbar .feature-finder-trigger { width: 40px; padding-inline: 10px; margin-right: auto; }
+  .topbar .demo-tag { font-size: 11px; }
+  .metrics-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .dashboard-grid, .lower-grid { grid-template-columns: minmax(0,1fr); }
+  .hero-photo-caption { font-size: 10px; }
+  .sidebar .brand small { font-size: 9px; }
+}
+@media (min-width: 1650px) {
+  .metrics-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .dashboard-grid, .lower-grid { grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); }
+}
+@media (max-width: 1099px) {
+  .app-shell, body[data-assistant-expanded=false] .app-shell { margin-right: 0; }
+  #assistant-panel { width: min(370px,calc(100vw - 28px)); z-index: 29; }
+  #assistant-panel[data-expanded=false] { inset: auto 0 max(14px,env(safe-area-inset-bottom)) auto; width: 142px; height: auto; padding: 0 8px 10px; background: transparent; overflow: visible; }
+  #assistant-panel[data-expanded=false] .companion-dock-top { display: none; }
+  #assistant-panel[data-expanded=false] .companion-head { padding: 0; gap: 6px; }
+  #assistant-panel[data-expanded=false] .companion-portrait { height: 215px; }
+  #assistant-panel[data-expanded=false] .companion-identity { padding: 5px 10px; border-radius: 18px; background: #f8fafb; box-shadow: 0 2px 10px #18344612; }
+  #assistant-panel[data-expanded=false] .companion-mic, #assistant-panel[data-expanded=false] .companion-end { display: none; }
+  #assistant-panel .companion-portrait { height: clamp(200px,32dvh,320px); }
+  .app-footer { padding-bottom: 250px; }
+}
+@media (max-height: 670px) {
+  #assistant-panel .companion-dock-top { min-height: 48px; }
+  #assistant-panel .companion-portrait { height: 180px; }
+  #assistant-panel .companion-head { gap: 6px; padding-bottom: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .companion-tabs button, #assistant-panel .companion-collapse, .companion-personas label span { transition: color 160ms ease, background-color 160ms ease; }
+}
+
+@media (max-width: 1099px) { #assistant-panel[data-expanded=false] .companion-launch { font-size: 12px; } }
+@media (max-height: 670px) and (min-width: 1100px) { #assistant-panel[data-expanded=false] .companion-portrait { height: 280px; } }
+#assistant-local[aria-pressed=true] { box-shadow: inset 0 0 0 2px #fff; }
+#assistant-local-host { display: none; min-height: 0; }
+#assistant-panel[data-local-voice=true][data-expanded=true] #assistant-local-host { display: flex; flex: 1 1 auto; min-height: 0; }
+.assistant-local-frame { display: block; width: 100%; height: 100%; border: 0; background: var(--paper); }
+#assistant-panel[data-local-voice=true] .companion-portrait,
+#assistant-panel[data-local-voice=true] .companion-portrait-note,
+#assistant-panel[data-local-voice=true] .companion-room,
+#assistant-panel[data-local-voice=true] .companion-appearance { display: none; }
+#assistant-panel[data-local-voice=true] .companion-head { display: flex; align-items: center; padding-bottom: 12px; }
+/* The page scroller stays in the main column. The assistant scroller stays inside the panel. */
+body[data-local-voice=true] { height: 100%; overflow: hidden; }
+body[data-local-voice=true] .app-shell { height: 100dvh; overflow: auto; }
+/* Closed: reserve a narrow strip for the vertical reopen tab so it never covers page content. */
+body[data-assistant-closed=true] .app-shell { margin-right: var(--assistant-reopen-width); }
+:root { --assistant-reopen-width: 40px; }
+.assistant-reopen { display: none; position: fixed; z-index: 28; top: 50%; right: 0; transform: translateY(-50%); width: var(--assistant-reopen-width); min-height: 44px; padding: 14px 0; writing-mode: vertical-rl; border: 1px solid var(--line); border-right: 0; border-radius: 10px 0 0 10px; background: var(--paper); color: var(--ink); font: 600 12px/1.3 var(--sans); box-shadow: 0 6px 18px #152b3e1a; }
+body[data-assistant-closed=true] .assistant-reopen:not([hidden]) { display: block; }
+@media (max-width: 1099px) {
+  body[data-assistant-closed=true] .app-footer { padding-bottom: 26px; }
+}
+
+/* The assistant always keeps its own panel: never collapsed, closed, or floating over the page. */
+#assistant-panel .companion-collapse, .assistant-reopen { display: none !important; }
+@media (max-width: 1099px) and (min-width: 900px) {
+  .app-shell { margin-right: var(--assistant-width); }
+  #assistant-panel { inset: 0 0 0 auto; width: var(--assistant-width); height: 100dvh; z-index: auto; }
+  .app-footer { padding-bottom: 26px; }
+}
+@media (max-width: 899px) {
+  .app-shell { margin-right: 0; }
+  #assistant-panel { position: static; inset: auto; width: auto; max-width: none; height: auto; min-height: 0; margin: 0; border-left: 0; border-top: 1px solid var(--line); z-index: auto; overflow: visible; }
+  #assistant-panel .companion-portrait { height: clamp(200px, 40vw, 300px); }
+  .app-footer { padding-bottom: 26px; }
+}
+
+/* Streamlined panel: no tabs; the avatar toggle sits on the portrait. */
+.companion-dock-top, .companion-appearance { display: none !important; }
+#assistant-panel .companion-head { padding-top: 12px; }
+#assistant-panel[data-local-voice=true] .companion-avatar-choice { display: none; }
+#assistant-panel .companion-avatar-choice { grid-column: 1 / -1; grid-row: 3; margin: 2px 0 0; padding: 0; border: 0; min-width: 0; }
+#assistant-panel .companion-personas { margin: 0; background: #eef2f5; }
+#assistant-panel .companion-personas label span { min-height: 32px; padding: 4px 12px; font-size: 12px; }
+#assistant-panel .companion-connect { display: flex; justify-content: flex-start; padding: 12px 0 4px; border: 0; }
+#assistant-panel .companion-connect[hidden], #assistant-panel .companion-connect:has(#assistant-text[hidden]) { display: none; }
+#assistant-panel .assistant-sharing[hidden] { display: none; }
+#assistant-panel .assistant-empty { padding: 14px 0 6px; border: 0; }
+#assistant-panel .assistant-foot { justify-content: flex-end; }
+
+/* Online / Offline switch in the panel's top-right corner, with both options always shown */
+#assistant-panel > .connectivity-switch { position: absolute; top: 12px; right: 16px; z-index: 5; padding: 3px; border: 1px solid var(--line); background: #fff; }
+#assistant-panel > .connectivity-switch button { min-width: 0; min-height: 32px; padding: 0 11px; border: 0; font-size: 12px; }
+#assistant-panel > .connectivity-switch button span { display: inline; }
+#assistant-panel > .connectivity-switch button[aria-checked=false] { display: inline-flex; }
+@media (max-width: 899px) { #assistant-panel { position: relative; } }

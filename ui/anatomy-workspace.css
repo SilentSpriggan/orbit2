@@ -1,0 +1,231 @@
+/* The body is the workspace; tools live in focused, keyboard-accessible dialogs. */
+.anatomy-workspace { min-width: 0; }
+.anatomy-workspace-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 8px 0 18px; }
+.anatomy-workspace-heading > div { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.anatomy-workspace-heading .eyebrow { font-size: 10px; letter-spacing: 1.5px; color: var(--muted); }
+.anatomy-atlas-count, #lab-loaded-stat { font-size: 12px; color: var(--muted); }
+.anatomy-toolstrip { position: sticky; top: 0; z-index: 12; background: var(--paper); display: flex; flex-wrap: wrap; gap: 7px; padding: 10px 0 14px; border-bottom: 1px solid var(--line); }
+.anatomy-toolstrip > button { display: flex; align-items: center; gap: 8px; min-height: 42px; padding: 10px 11px; border: 1px solid #cbd5da; border-radius: 7px; background: #fff; color: var(--ink); font-size: 12px; font-weight: 500; }
+.anatomy-toolstrip > button > i { display: flex; width: 16px; height: 16px; }
+.anatomy-toolstrip > button > i:last-child { width: 12px; }
+.anatomy-toolstrip > button > i > svg { width: 16px; height: 16px; }
+.anatomy-toolstrip > button > i:last-child > svg { width: 12px; height: 12px; color: var(--muted); }
+.anatomy-toolstrip > button:hover, .anatomy-toolstrip > button[aria-expanded=true] { background: #e9eff0; border-color: #8fa9b3; }
+.anatomy-preset-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 0 8px; flex-wrap: wrap; }
+.anatomy-quick-presets { display: flex; flex-wrap: wrap; gap: 3px; }
+.anatomy-quick-presets > button { min-height: 38px; padding: 9px 15px; font-size: 12px; background: transparent; border: 1px solid transparent; border-radius: 6px; color: var(--muted); }
+.anatomy-quick-presets > button[aria-pressed=true] { background: #e1e9e8; color: #254e4c; border-color: #c4d2ce; font-weight: 600; }
+#anatomy-context-status { font-size: 11px; color: #4e6862; }
+.lab-viewer, .lab-viewer .anatomy-panel, .anatomy-panel { border: 0; box-shadow: none; background: transparent; border-radius: 0; overflow: visible; }
+.lab-viewer .anatomy-panel-heading, .lab-viewer .embedded-system-details { display: none; }
+.lab-workspace-toolbar { flex-wrap: nowrap; background: transparent; border: 0; padding: 10px 0; gap: 8px; }
+.lab-workspace-toolbar > span { flex: 1; flex-basis: auto; font-size: 9px; }
+.lab-workspace-toolbar button { min-height: 34px; padding: 6px 10px; border: 0; border-radius: 5px; color: #4d626d; font-size: 11px; }
+.lab-workspace-toolbar button:hover, .lab-workspace-toolbar button[aria-pressed=true] { background: #e4ecec; }
+.anatomy-stage, .lab-viewer .anatomy-stage { height: clamp(680px, 80dvh, 940px); min-height: 620px; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: hidden; }
+.anatomy-stage::before, .anatomy-stage::after { display: none; }
+.anatomy-canvas-host, .anatomy-canvas-host canvas { background: transparent; }
+.anatomy-stage .anatomy-stage-label, .anatomy-stage .anatomy-orientation, .anatomy-stage .anatomy-stage-caption { color: #60717c; font-size: 9px; letter-spacing: .7px; }
+.lab-viewer .anatomy-stage-label { top: 16px; left: 0; font-size: 9px; }
+.anatomy-stage .anatomy-orientation { top: 16px; right: 0; }
+.anatomy-stage .anatomy-stage-caption { bottom: 16px; left: 0; right: 0; font-size: 9px; }
+.anatomy-stage-caption > span:last-child { display: none; }
+.anatomy-status-light { background: #6b8a73; box-shadow: none; }
+.anatomy-loading { color: var(--ink); background: transparent; }
+.anatomy-loading p { color: var(--muted); }
+.anatomy-stage-tools { right: 0; bottom: 55px; gap: 8px; }
+.anatomy-stage-tools button { width: 39px; height: 39px; background: #ffffffdd; color: var(--ink); border: 1px solid #cbd5da; border-radius: 7px; box-shadow: 0 2px 4px #122d3610; }
+.anatomy-stage-tools button:hover { background: #e5ecec; color: #163f4a; }
+.anatomy-part-label { font-size: 12px; padding: 8px 12px; color: #253f45; border: 1px solid #b8c9c8; background: #ffffffed; border-radius: 5px; box-shadow: 0 3px 12px #122d3612; }
+.anatomy-view-bar, .lab-viewer .anatomy-view-bar { background: transparent; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.anatomy-view-bar > button, .lab-viewer .anatomy-view-bar > button { font-size: 12px; padding: 14px 16px; color: #5a6c76; background: transparent; }
+.anatomy-view-bar > button.active { color: #28584f; box-shadow: inset 0 -2px #52796e; }
+.anatomy-view-bar > span { color: var(--muted); font-size: 9px; }
+.anatomy-selection { background: transparent; padding: 20px 0 12px; }
+.anatomy-selection > span { font-size: 9px; color: var(--muted); }
+.anatomy-selection > strong, .lab-viewer .anatomy-selection > strong { color: var(--ink); font-size: 18px; font-weight: 500; }
+.anatomy-selection > small, .lab-viewer .anatomy-selection > small { color: var(--muted); font-size: 12px; }
+.anatomy-search { padding: 10px 0; background: transparent; }
+.anatomy-search input { font-size: 13px; min-height: 42px; }
+.anatomy-model-note { padding: 10px 0; color: var(--muted); background: transparent; font-size: 11px; }
+.anatomy-workspace-inspector { margin: 20px 0 0; padding: 24px 0; border-top: 1px solid var(--line); background: transparent; max-height: none; }
+.anatomy-workspace-inspector h3 { font-size: 20px; font-weight: 500; margin: 10px 0; }
+.anatomy-workspace-inspector p { font-size: 13px; max-width: 70ch; line-height: 1.65; }
+.anatomy-source-footnote { font-size: 11px; color: var(--muted); line-height: 1.7; padding: 12px 0; border-top: 1px solid var(--line); }
+.anatomy-source-footnote button { font-size: inherit; }
+.crew-anatomy-layout { grid-template-columns: minmax(0, 1fr); }
+.crew-anatomy-layout .anatomy-panel { padding-inline: 0; }
+.crew-anatomy-layout .anatomy-stage { height: 760px; }
+.lab-viewer.viewer-expanded { position: fixed; inset: 0 var(--assistant-width) 0 0; width: auto; height: 100dvh; padding: 20px 32px; background: var(--paper); overflow: auto; }
+body[data-assistant-expanded=false] .lab-viewer.viewer-expanded { right: var(--assistant-compact-width); }
+.lab-viewer.viewer-expanded .lab-workspace-toolbar { position: sticky; top: -20px; z-index: 8; background: var(--paper); padding-block: 14px; }
+.lab-viewer.viewer-expanded .anatomy-stage { min-height: 500px; height: calc(100dvh - 140px); }
+
+.anatomy-tool-dialog { position: fixed; inset: 84px calc(var(--assistant-width) + 18px) auto auto; width: min(430px, calc(100vw - 40px)); max-width: none; max-height: calc(100dvh - 112px); margin: 0; padding: 0; border: 1px solid #ccd7d9; border-radius: 12px; background: #fbfcfc; color: var(--ink); box-shadow: 0 14px 70px #14313c29; overflow: auto; scrollbar-width: thin; }
+body[data-assistant-expanded=false] .anatomy-tool-dialog { right: calc(var(--assistant-compact-width) + 18px); }
+.anatomy-tool-dialog::backdrop { background: #1733420a; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.anatomy-tool-dialog > header { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 24px 24px 16px; background: #fbfcfc; z-index: 3; }
+.anatomy-tool-dialog > header .eyebrow { font-size: 9px; letter-spacing: 1.5px; color: var(--muted); }
+.anatomy-tool-dialog > header h2 { font-size: 24px; font-weight: 500; letter-spacing: -.7px; margin-top: 9px; }
+.anatomy-tool-dialog > header button { display: grid; place-items: center; width: 36px; height: 36px; flex-shrink: 0; border: 1px solid #d2dcdf; border-radius: 50%; background: transparent; color: var(--ink); }
+.anatomy-tool-dialog > header button svg { width: 17px; height: 17px; }
+.anatomy-dialog-description { margin: 0; padding: 0 24px 20px; color: var(--muted); font-size: 13px; line-height: 1.65; border-bottom: 1px solid var(--line); }
+.anatomy-dialog-content { padding: 20px 24px 24px; }
+.anatomy-tool-dialog > footer { position: sticky; bottom: 0; background: #fbfcfc; display: flex; align-items: center; gap: 14px; padding: 16px 24px; border-top: 1px solid var(--line); z-index: 3; }
+.anatomy-tool-dialog > footer span { font-size: 11px; color: var(--muted); }
+.anatomy-dialog-content h3 { font-size: 14px; font-weight: 600; margin-bottom: 13px; }
+.anatomy-dialog-content label { display: block; color: #526773; font-size: 12px; margin-bottom: 9px; }
+.anatomy-dialog-content .field-input { font-size: 13px; min-height: 42px; width: 100%; }
+.anatomy-dialog-content select { margin: 5px 0 14px; }
+.anatomy-dialog-section { border-top: 1px solid var(--line); margin-top: 23px; padding-top: 23px; }
+.anatomy-dialog-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 20px; }
+.anatomy-dialog-actions .button { min-height: 38px; font-size: 12px; padding-inline: 12px; }
+.anatomy-choice-row, .anatomy-view-options, .opacity-presets { display: flex; gap: 6px; flex-wrap: wrap; }
+.anatomy-choice-row button, .anatomy-view-options button, .opacity-presets button { min-height: 37px; border: 1px solid #cbd6d9; background: white; color: #49626a; border-radius: 5px; font-size: 12px; padding: 8px 13px; }
+.anatomy-choice-row button[aria-pressed=true], .opacity-presets button[aria-pressed=true] { background: #e4ece8; color: #2b564b; border-color: #9cb7ae; }
+.anatomy-option-list { display: grid; gap: 7px; }
+.anatomy-option-list button { display: flex; justify-content: space-between; align-items: center; padding: 14px; font-size: 14px; background: white; border: 1px solid #d3dddf; border-radius: 6px; text-align: left; color: var(--ink); }
+.anatomy-option-list button[aria-pressed=true] { background: #e8efec; border-color: #a2b8ad; }
+.anatomy-option-list svg { width: 16px; height: 16px; color: var(--muted); }
+.anatomy-step-label { display: block; font-size: 12px; color: var(--muted); margin: 18px 0 8px; }
+.anatomy-stepper { display: flex; align-items: center; gap: 8px; width: fit-content; border: 1px solid #cad6d8; border-radius: 6px; overflow: hidden; background: white; }
+.anatomy-stepper button { width: 40px; height: 40px; background: #f0f4f4; color: var(--ink); font-size: 20px; }
+.anatomy-stepper input { width: 56px; min-width: 0; padding: 8px 0 8px 8px; border: 0; color: var(--ink); font-size: 14px; background: transparent; }
+.anatomy-stepper > span { font-size: 12px; color: var(--muted); }
+.anatomy-fine-note, .anatomy-context-note { font-size: 12px; color: #597066; line-height: 1.65; margin: 12px 0; }
+.anatomy-dialog-content .system-menu-tools { padding: 0 0 16px; gap: 10px; }
+.anatomy-dialog-content .system-menu-tools button { font-size: 12px; min-height: 32px; }
+.system-group > summary { font-size: 13px; padding: 14px 0; }
+.system-layer-row { padding: 10px 0; }
+.system-layer-toggle { min-height: 38px; }
+.system-layer-toggle > b { font-size: 13px; }
+.system-layer-toggle > small { font-size: 10px; }
+.system-layer-toggle:disabled { opacity: 1; cursor: default; }
+.system-layer-toggle.active > span { box-shadow: 0 0 0 2px #fbfcfc, 0 0 0 3px #87a99a; }
+.layer-isolate { min-width: 34px; min-height: 34px; border: 1px solid #d7dfe1; border-radius: 5px; }
+.layer-edit { margin: 2px 0 0 25px; }
+.layer-edit > summary { font-size: 11px; color: var(--muted); padding: 5px 0; cursor: pointer; }
+.layer-edit .opacity-presets { margin: 9px 0; }
+.layer-edit .layer-opacity { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.layer-opacity input[type=number] { width: 72px; min-height: 34px; border: 1px solid #ccd8da; padding: 6px 8px; border-radius: 5px; background: white; font-size: 12px; }
+.anatomy-tool-dialog .lab-browser-tabs { display: flex; margin: -6px -8px 16px; gap: 4px; background: transparent; }
+.anatomy-tool-dialog .lab-browser-tabs button { flex: 1; padding: 10px 5px; font-size: 12px; }
+.anatomy-tool-dialog #anatomy-browser-controls { padding: 0; }
+.anatomy-tool-dialog .anatomy-browser-list { max-height: 42dvh; margin: 6px -8px 0; }
+.anatomy-tool-dialog .study-collection > summary { padding: 14px 8px; }
+.anatomy-tool-dialog .study-collection > summary > b, .anatomy-tool-dialog .study-collection > button > span, .anatomy-tool-dialog .anatomy-structure-item > span { font-size: 13px; }
+.anatomy-tool-dialog .study-collection > button { padding-left: 28px; }
+.anatomy-tool-dialog .anatomy-structure-item > small { font-size: 10px; }
+.anatomy-tool-dialog .condition-reference-panel { box-shadow: none; padding: 0; border: 0; background: transparent; }
+.anatomy-tool-dialog button:focus-visible, .anatomy-toolstrip button:focus-visible, .anatomy-quick-presets button:focus-visible { outline: 2px solid #3e7783; outline-offset: 3px; }
+.anatomy-tool-dialog button:disabled { opacity: .45; cursor: not-allowed; }
+.anatomy-tool-dialog .system-layer-toggle:disabled { opacity: 1; cursor: default; }
+@media (min-width: 1600px) { .anatomy-stage, .lab-viewer .anatomy-stage { height: 870px; } }
+@media (max-width: 1099px) {
+ .anatomy-tool-dialog, body[data-assistant-expanded=false] .anatomy-tool-dialog { right: 18px; top: 74px; }
+ .lab-viewer.viewer-expanded, body[data-assistant-expanded=false] .lab-viewer.viewer-expanded { right: 0; }
+ .anatomy-toolstrip { gap: 6px; }
+ .anatomy-toolstrip > button { font-size: 12px; padding: 9px 11px; }
+}
+@media (max-width: 620px) {
+ .anatomy-workspace-heading { align-items: flex-start; }
+ .anatomy-workspace-heading > div { display: block; }
+ .anatomy-atlas-count { display: block; margin-top: 7px; }
+ #lab-loaded-stat { font-size: 10px; }
+ .anatomy-toolstrip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+ .anatomy-toolstrip > button { justify-content: center; padding: 9px 5px; font-size: 12px; }
+ .anatomy-toolstrip > button > i:last-child > svg { display: none; }
+ .anatomy-preset-row { padding-top: 13px; }
+ .anatomy-quick-presets { width: 100%; gap: 0; }
+ .anatomy-quick-presets button { flex: 1; padding-inline: 7px; font-size: 11px; }
+ .anatomy-stage, .lab-viewer .anatomy-stage, .crew-anatomy-layout .anatomy-stage { height: 690px; min-height: 600px; }
+ .anatomy-stage-label { max-width: calc(100% - 90px); }
+ .lab-viewer .anatomy-stage-label, .anatomy-stage .anatomy-orientation { font-size: 8px; }
+ .lab-workspace-toolbar { flex-wrap: nowrap; gap: 3px; }
+ .lab-workspace-toolbar > span { display: none; }
+ .lab-workspace-toolbar button { flex: 1; font-size: 11px; padding-inline: 6px; }
+ .anatomy-view-bar > button, .lab-viewer .anatomy-view-bar > button { flex: 1; padding-inline: 6px; font-size: 11px; }
+ .anatomy-tool-dialog, body[data-assistant-expanded=false] .anatomy-tool-dialog { inset: auto 8px 8px; width: auto; max-height: 82dvh; border-radius: 14px; }
+ .anatomy-tool-dialog > header { padding: 20px 20px 13px; }
+ .anatomy-dialog-description { padding-inline: 20px; }
+ .anatomy-dialog-content { padding-inline: 20px; }
+ .anatomy-tool-dialog > footer { padding: 14px 20px; }
+ .lab-viewer.viewer-expanded { padding-inline: 14px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .anatomy-toolstrip button, .anatomy-quick-presets button, .anatomy-choice-row button { transition: background-color 140ms ease, border-color 140ms ease; }
+ .anatomy-tool-dialog[open] { animation: anatomy-dialog-in 150ms ease-out; }
+ @keyframes anatomy-dialog-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+}
+
+/* Big-body lab layout: view controls on top, tools in a rail on each side, the body fills the screen. */
+.lab-wide .lab-top { position: sticky; top: var(--offline-banner-h, 0px); z-index: 12; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 4px 0 10px; background: var(--paper); border-bottom: 1px solid var(--line); }
+.lab-views { display: flex; gap: 4px; flex-wrap: wrap; }
+.lab-views > button { min-height: 36px; padding: 6px 14px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: #4d626d; font-size: 12px; font-weight: 500; }
+.lab-views > button:hover { background: #e9f1f5; }
+.lab-views > button.active { background: var(--orbit-cyan-soft, #e6f4f9); border-color: #bfe0ec; color: var(--orbit-navy, #0f2345); font-weight: 600; }
+.lab-wide .lab-workspace-toolbar { display: flex; flex-wrap: wrap; padding: 0; }
+.lab-wide .lab-workspace-toolbar button { white-space: nowrap; }
+.lab-stage-grid { display: grid; grid-template-columns: 92px minmax(0, 1fr) 92px; gap: 10px; align-items: start; }
+.lab-rail { position: sticky; top: calc(58px + var(--offline-banner-h, 0px)); display: flex; flex-direction: column; gap: 8px; padding: 14px 0; border: 0; background: transparent; }
+.lab-rail-button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; min-height: 70px; padding: 10px 4px; border: 1px solid #cbd8e0; border-radius: 10px; background: #fff; color: var(--ink); font-size: 11.5px; font-weight: 600; line-height: 1.2; text-align: center; }
+.lab-rail-button > i { display: flex; width: 20px; height: 20px; color: var(--orbit-cyan-ink, #1d7a9e); }
+.lab-rail-button > i > svg { width: 20px; height: 20px; }
+.lab-rail-button:hover, .lab-rail-button[aria-expanded=true] { background: var(--orbit-cyan-soft, #e6f4f9); border-color: #9fcfe0; }
+.lab-rail-presets { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+.lab-rail-label { font-size: 9px; letter-spacing: .12em; color: var(--muted); text-align: center; margin-bottom: 2px; }
+.lab-rail-presets > button { min-height: 34px; padding: 6px 4px; border-radius: 7px; font-size: 11px; line-height: 1.2; text-align: center; white-space: normal; }
+.lab-wide .lab-viewer .anatomy-stage { height: calc(100dvh - 142px - var(--offline-banner-h, 0px)); min-height: 520px; max-height: 1100px; }
+/* A compact heading on this page leaves the screen to the body. */
+/* The page name is in the sidebar and top bar; the body gets the screen. */
+#main[data-page=anatomy] { padding-top: 14px; }
+#main[data-page=anatomy] .page-heading { display: none; }
+.lab-wide .lab-viewer .anatomy-view-bar { display: none; }
+.lab-wide .anatomy-stage .anatomy-stage-tools { bottom: 44px; }
+.lab-wide .anatomy-workspace-heading { padding: 14px 0 6px; border-top: 1px solid var(--line); }
+.lab-wide #anatomy-context-status { font-size: 12px; color: var(--muted); }
+/* Narrow screens: rails become rows above and below the body. */
+@container content (max-width: 700px) {
+  .lab-stage-grid { grid-template-columns: minmax(0, 1fr); }
+  .lab-rail { position: static; flex-direction: row; flex-wrap: wrap; padding: 8px 0; }
+  .lab-rail-button { flex: 1 1 70px; min-height: 56px; }
+  .lab-rail-left { order: 0; } .lab-viewer { order: 1; } .lab-rail-right { order: 2; }
+  .lab-rail-presets { flex-direction: row; flex-wrap: wrap; width: 100%; border-top: 0; margin-top: 0; padding-top: 0; }
+  .lab-rail-presets > button { flex: 1 1 auto; }
+  .lab-wide .lab-viewer .anatomy-stage { height: 70dvh; min-height: 440px; }
+}
+
+/* Zoom and reset sit in the right rail, below the Show group, in one aligned column. */
+.lab-wide .anatomy-stage .anatomy-stage-tools { display: none; }
+.lab-rail-zoom { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+.lab-rail-zoom > button { display: grid; place-items: center; width: 100%; height: 40px; padding: 0; border: 1px solid #cbd8e0; border-radius: 9px; background: #fff; color: var(--ink); }
+.lab-rail-zoom > button > i, .lab-rail-zoom > button svg { width: 18px; height: 18px; }
+.lab-rail-zoom > button:hover { background: var(--orbit-cyan-soft, #e6f4f9); border-color: #9fcfe0; }
+@container content (max-width: 700px) { .lab-rail-zoom { flex-direction: row; width: 100%; border-top: 0; margin-top: 0; padding-top: 0; } .lab-rail-zoom > .lab-rail-label { display: none; } .lab-rail-zoom > button { flex: 1; } }
+
+/* Crew member shown in the lab */
+.lab-profile { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.lab-profile-avatar { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--orbit-cyan-soft, #e6f4f9); color: var(--orbit-navy, #0f2345); font-size: 12px; font-weight: 700; flex: none; }
+.lab-profile-who { display: grid; line-height: 1.25; }
+.lab-profile-who strong { font-size: 14px; color: var(--ink); }
+.lab-profile-who small { font-size: 11px; color: var(--muted); }
+.lab-profile-conditions { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; min-width: 0; }
+.lab-profile-conditions > span { font-size: 12px; color: var(--muted); }
+.lab-profile-conditions button { display: inline-flex; align-items: center; gap: 6px; min-height: 30px; padding: 4px 10px; border: 1px solid #f0d3a2; border-radius: 999px; background: #fff8ec; color: #6b4610; font-size: 12px; }
+.lab-profile-conditions button b { font-size: 10px; color: #a56a14; }
+.lab-profile-conditions button:hover:not(:disabled) { background: #fdeccd; }
+.lab-profile .text-button { font-size: 12px; white-space: nowrap; }
+.lab-wide .lab-viewer .anatomy-stage { height: calc(100dvh - 196px - var(--offline-banner-h, 0px)); }
+@media (min-width: 1100px) { .lab-wide .lab-viewer .anatomy-stage { height: calc(100dvh - 127px - var(--offline-banner-h, 0px)); } }
+
+/* Left shin teaching overlay */
+.shin-illustration-legend {
+  position: absolute; z-index: 3; left: 12px; bottom: 42px;
+  display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 12px;
+  color: #253f45; background: #fff; border: 1px solid #b8c9c8; border-radius: 6px;
+  font: 600 12px/1.4 var(--sans, sans-serif);
+}
+.shin-illustration-legend button {
+  font: inherit; cursor: pointer; color: #294f65; padding: 4px 7px;
+  border: 1px solid #c8d7dd; background: #f4f8fa; border-radius: 4px;
+}

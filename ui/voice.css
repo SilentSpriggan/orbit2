@@ -1,0 +1,6 @@
+/* Crew voice AI assistant tab (voice.js). The embedded workspace scrolls inside a
+   viewport-tall frame so its dialogs, drawers and notifications stay on screen. */
+.voice-workspace{background:transparent}
+.voice-frame{display:block;width:100%;height:calc(100dvh - 250px);min-height:620px;border:0;background:transparent;color-scheme:light}
+.voice-frame-note{margin-top:12px;font-size:10px;color:var(--muted)}
+.voice-frame-note .mono{font-size:9px}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f2345">
+  <meta name="description" content="ORBIT is a crew health monitoring prototype for long duration space missions. Track health indicators, review trends, and complete your daily routine.">
+  <title>ORBIT | Crew Health</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/brand/orbit-mark-32.png">
+  <link rel="apple-touch-icon" href="assets/brand/orbit-mark-180.png">
+  <link rel="stylesheet" href="assets/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="crew.css">
+  <link rel="stylesheet" href="anatomy-lab.css">
+  <link rel="stylesheet" href="care.css">
+  <link rel="stylesheet" href="health-inputs.css">
+  <link rel="stylesheet" href="assistant.css">
+  <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="theme-scale.css">
+  <link rel="stylesheet" href="design-tokens.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="mission.css">
+  <link rel="stylesheet" href="collect.css">
+  <link rel="stylesheet" href="onboard-assistant.css">
+  <link rel="stylesheet" href="touch.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.min.js"}}</script>
+  <script src="historical-crew.js" defer></script>
+  <script src="crew.js" defer></script>
+  <script src="condition-reference.js" defer></script>
+  <script src="bone-report-index.js" defer></script>
+  <script src="condition-panel.js" defer></script>
+  <script src="anatomy-lab.js" defer></script>
+  <script src="neural-model.js" defer></script>
+  <script src="neural-logic.js" defer></script>
+  <script src="neural-adapter.js" defer></script>
+  <script src="input-logic.js" defer></script>
+  <script src="observation-store.js" defer></script>
+  <script src="health-inputs.js" defer></script>
+  <script src="care-logic.js" defer></script>
+  <script src="care.js" defer></script>
+  <script src="state-logic.js" defer></script>
+  <script src="pdf-logic.js" defer></script>
+  <script src="access-logic.js" defer></script>
+  <script src="mission-logic.js" defer></script>
+  <script src="skin-logic.js" defer></script>
+  <script src="research-library.js" defer></script>
+  <script src="onboard-assistant.js" defer></script>
+  <script src="mission.js" defer></script>
+  <script src="skin.js" defer></script>
+  <script src="hrp-reference.js" defer></script>
+  <script src="hrp-links.js" defer></script>
+  <link rel="stylesheet" href="workspace-layout.css">
+  <link rel="stylesheet" href="studio.css">
+  <link rel="stylesheet" href="assistant-dock.css">
+  <link rel="stylesheet" href="anatomy-workspace.css">
+  <link rel="stylesheet" href="voice.css">
+  <script src="voice.js" defer></script>
+  <script src="collection-methods.js" defer></script>
+  <script src="collection-player.js" defer></script>
+  <script src="collect.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="assistant-bridge.js" defer></script>
+  <script src="condition-anatomy.js" defer></script>
+  <script src="assistant-permissions.js" defer></script>
+  <script src="assistant-features.js" defer></script>
+  <script src="assistant-actions.js" defer></script>
+  <script src="assistant.js" defer></script>
+  <script src="workspace.js" defer></script>
+  <link rel="stylesheet" href="trends.css">
+  <link rel="stylesheet" href="brand.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <a class="skip skip-assistant" href="#assistant-launch">Skip to crew assistant</a>
+  <aside class="sidebar" id="sidebar">
+    <a href="#status" class="brand" aria-label="ORBIT Crew Health System home"><img class="brand-logo" src="assets/brand/orbit-logo-sidebar.png" width="440" height="132" alt="ORBIT Crew Health System"><sup class="si-mark" aria-hidden="true">SI</sup></a>
+    <div class="rail-rule"></div>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#status" data-nav="status"><i data-icon="alert"></i><span class="nav-copy"><strong>Crew status</strong><small>Crew health at a glance</small></span></a>
+      <a href="#crew" data-nav="crew"><i data-icon="crew"></i><span class="nav-copy"><strong>Crew profiles</strong><small>Vitals and condition notes</small></span></a>
+      <a href="#log" data-nav="log"><i data-icon="clipboard"></i><span class="nav-copy"><strong>Health log &amp; trends</strong><small>Readings and how they change</small></span></a>
+      <a href="#collect" data-nav="collect"><i data-icon="heart"></i><span class="nav-copy"><strong>Collect vitals</strong><small>How each reading is taken</small></span></a>
+      <a href="#care" data-nav="care"><i data-icon="shield"></i><span class="nav-copy"><strong>Health assessment</strong><small>Checks, wellbeing, exercise and skin</small></span></a>
+      <a href="#routine" data-nav="routine"><i data-icon="checksquare"></i><span class="nav-copy"><strong>Daily routine</strong><small>Today&rsquo;s health tasks</small></span></a>
+      <a href="#risks" data-nav="risks"><i data-icon="activity"></i><span class="nav-copy"><strong>Health risk readings</strong><small>Radiation, bone and muscle</small></span></a>
+      <a href="#anatomy" data-nav="anatomy"><i data-icon="layers"></i><span class="nav-copy"><strong>Anatomy lab</strong><small>Interactive reference anatomy</small></span></a>
+      <a href="#voice" data-nav="voice"><i data-icon="signal"></i><span class="nav-copy"><strong>Crew voice AI assistant</strong><small>Local voice workspace</small></span></a>
+      <a href="#research" data-nav="research"><i data-icon="book"></i><span class="nav-copy"><strong>Offline evidence library</strong><small>Research and cited sources</small></span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="mission-patch"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 3 55 17v30L32 61 9 47V17Z"/><circle cx="32" cy="28" r="14"/><path d="m21 43 11-31 11 31M25 34h14M15 47h34"/><path class="patch-red" d="M12 42c16 1 31-9 41-23"/></svg><span>EXPLORATION CLASS<small id="rail-environment">LUNAR TRANSIT</small></span></div>
+      <button class="rail-settings" data-action="settings"><i data-icon="settings"></i>Workspace settings<i data-icon="chevronright"></i></button>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button menu-toggle" data-action="menu" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+      <button class="feature-finder-trigger" data-workspace-find aria-label="Find a feature"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Find a feature</span><kbd>⌘ K</kbd></button><div class="topbar-location"><span class="mono">MISSION CONTROL</span><span class="slash">/</span><span id="header-page">Crew status</span></div>
+      <div class="topbar-actions"><div class="connectivity-switch" id="connectivity-switch" role="radiogroup" aria-label="Connection mode"><button type="button" role="radio" data-connectivity="online" aria-checked="true" title="Online: cloud assistant and external links available" aria-label="Online mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></svg><span>Online</span></button><button type="button" role="radio" data-connectivity="offline" aria-checked="false" title="Offline: nothing leaves this device" aria-label="Offline mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2l20 20"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M5 12.5a10 10 0 0 1 4.2-2.4"/><path d="M2 8.8a15 15 0 0 1 4.3-2.8"/><path d="M10.7 5.1A15 15 0 0 1 22 8.8"/><path d="M15.7 10.2A10 10 0 0 1 19 12.5"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></svg><span>Offline</span></button></div></div>
+    </header>
+    <div class="offline-banner" id="offline-banner" role="status" aria-live="polite" hidden><span class="offline-banner-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 2l20 20"/><path d="M8.5 16a5 5 0 0 1 7 0"/><path d="M5 12.5a10 10 0 0 1 4.2-2.4"/><path d="M2 8.8a15 15 0 0 1 4.3-2.8"/><path d="M10.7 5.1A15 15 0 0 1 22 8.8"/><path d="M15.7 10.2A10 10 0 0 1 19 12.5"/><circle cx="12" cy="19.5" r="1" fill="currentColor" stroke="none"/></svg></span><p><strong id="offline-banner-title">Offline mode</strong> <span id="offline-banner-text">Nothing leaves this device.</span></p><button type="button" class="offline-banner-action" id="offline-banner-action">Go online</button></div>
+    <main id="main" tabindex="-1"></main>
+    <footer class="app-footer"><span>ORBIT <b aria-hidden="true">/</b> HUMAN EXPLORATION, HUMAN HEALTH.</span><button data-action="about">Research prototype · About & data</button></footer>
+  </div>
+  <div class="mobile-scrim" data-action="menu"></div>
+  <dialog id="modal" aria-labelledby="modal-title"><h2 id="modal-title" hidden>Dialog</h2></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

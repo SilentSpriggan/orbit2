@@ -1,0 +1,9 @@
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.
+
+Official current license (updated 2025-02-27):
+https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+https://creativecommons.org/licenses/by/4.0/
+
+Reference data: BodyParts3D 4.0, adult male anatomy. The user supplied the atlas manifest and 15 packed binary geometry chunks. The manifest reports geometry simplification with meshoptimizer at 0.2% maximum relative error, axis/unit conversion, and quantized normals. ORBIT uses these supplied geometry files without modifying their vertex positions, and adds display layers, selection colors, and record annotations.
+
+The reference model does not depict an individual crew member, a medical scan, or changes caused by a recorded condition. Linked regions are visual record annotations only.

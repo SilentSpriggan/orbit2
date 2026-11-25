@@ -1,0 +1,65 @@
+/* "Ask the onboard library" panel. Flat panel, Mission Blue only for the action and citations. */
+.onboard-ask{margin-bottom:16px;padding:0}
+.onboard-ask>summary{padding:14px 20px;cursor:pointer;font-size:14px;font-weight:600}
+.onboard-ask>summary h2{display:inline;margin:0;font-size:15px;font-weight:600}
+.onboard-ask>summary:focus-visible{outline-offset:-3px;border-radius:var(--radius)}
+.onboard-status{margin-left:12px;font-size:12px;font-weight:400;color:var(--muted);white-space:normal}
+.onboard-body{padding-bottom:18px;border-top:1px solid var(--line)}
+.onboard-intro{max-width:72ch;margin:14px 20px;font-size:13px;line-height:1.55;color:var(--muted);text-wrap:pretty}
+.onboard-ask [hidden],.mission-research-tools [hidden]{display:none!important}
+.onboard-form{display:grid;gap:6px;margin:0 20px}
+.onboard-form label{font-size:13px;font-weight:600}
+.onboard-form>div{display:flex;flex-wrap:wrap;gap:10px}
+.onboard-form .field-input{flex:1;min-width:0}
+.onboard-form .button{flex:none;min-width:96px;justify-content:center}
+.onboard-form .button[disabled]{opacity:.65;cursor:default}
+.onboard-field-msg{margin:8px 20px 0;font-size:13px;font-weight:600;color:var(--ink)}
+.onboard-field-msg:empty{display:none}
+.onboard-starters{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:12px 20px 0;font-size:13px;color:var(--muted)}
+.onboard-starters>div{display:flex;flex-wrap:wrap;gap:6px}
+.onboard-starters .button{height:auto;min-height:34px;font-size:12px;line-height:1.4;text-align:left;white-space:normal}
+.onboard-style{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-top:14px;font-size:13px;color:var(--muted)}
+.onboard-form .field-input:disabled{background:var(--paper);color:var(--muted)}
+.onboard-style .segmented{display:flex;flex-wrap:wrap;gap:4px;max-width:100%;min-width:0}
+.onboard-style .segmented button{font:600 12px var(--sans);padding:6px 10px}
+.onboard-style .segmented button.active{color:var(--blue)}
+.onboard-help .notice,.onboard-ask .onboard-help{margin:12px 20px 0}
+.onboard-help>div{flex:1;min-width:0}
+.onboard-help details{margin-top:6px}
+.onboard-help .button{margin-top:8px}
+.onboard-help summary{width:fit-content;font-size:12px;font-weight:600;color:var(--blue);cursor:pointer}
+.onboard-help details p{margin-top:6px}
+.onboard-help code{font:600 13px var(--sans);background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1px 5px;color:var(--ink)}
+.onboard-answer{margin:0 20px}
+.onboard-answer:not(:empty){margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.onboard-text{max-width:60ch;font-size:14px;line-height:1.6;color:var(--ink)}
+.onboard-text p+p,.onboard-text p+ul,.onboard-text ul+p{margin-top:10px}
+.onboard-text ul{padding-left:20px}
+.onboard-text li+li{margin-top:4px}
+.onboard-thinking{color:var(--muted)}
+.onboard-ask .onboard-error{margin:0 0 14px;padding-top:0;border-top:0;color:var(--ink)}
+.onboard-error>div{flex:1;min-width:0}
+.onboard-error-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.onboard-next{margin-top:12px}
+.onboard-cite{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:18px;margin:0 1px;padding:0 5px;border:1px solid var(--blue);border-radius:999px;background:var(--soft-blue);color:var(--blue);font:600 12px/1 var(--sans);vertical-align:2px;cursor:pointer}
+.onboard-cite-missing{font-size:13px;color:var(--muted)}
+.onboard-sources-box{margin-top:18px}
+.onboard-sources-box>summary{width:fit-content;font-size:13px;font-weight:600;color:var(--blue);cursor:pointer}
+.onboard-stale{color:var(--muted)}
+.onboard-sources{list-style:none;margin-top:8px;padding:0}
+.onboard-sources li{display:flex;gap:12px;padding:10px 0;border-top:1px solid var(--line);border-radius:6px}
+.onboard-sources li:focus{outline:3px solid #4086d4;outline-offset:4px}
+.onboard-source-n{flex:none;width:22px;height:22px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:12px;font-weight:600;display:grid;place-items:center;color:var(--ink)}
+.onboard-sources strong{display:block;font-size:13px}
+.onboard-sources small{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+.onboard-passage{margin-top:4px}
+.onboard-passage summary{width:fit-content;font-size:12px;font-weight:600;color:var(--blue);cursor:pointer}
+.onboard-passage p{max-width:60ch;margin-top:6px;font-size:13px;line-height:1.55;color:var(--ink)}
+.onboard-sources li>div{min-width:0}
+.onboard-sources a{display:flex;width:fit-content;align-items:center;gap:4px;margin-top:4px;font-size:12px;font-weight:600;color:var(--blue);overflow-wrap:anywhere}
+.onboard-sources a i{width:13px;height:13px}
+.onboard-limit{margin:12px 20px 0;font-size:12px;color:var(--muted)}
+.onboard-limit:empty{display:none}
+.onboard-limit .text-button{display:inline;margin:0;padding:0;font-size:inherit;text-decoration:underline;text-underline-offset:2px}
+.onboard-timing{font-variant-numeric:tabular-nums}
+@media(max-width:620px){.onboard-ask>summary{padding:12px 16px}.onboard-status{display:block;margin:4px 0 0}.onboard-starters,.onboard-form,.onboard-field-msg,.onboard-answer,.onboard-limit,.onboard-intro,.onboard-ask .onboard-help{margin-left:16px;margin-right:16px}.onboard-form .field-input{flex-basis:100%;font-size:16px}.onboard-form .button{min-width:80px}.onboard-style .segmented{display:grid;grid-template-columns:repeat(3,1fr);width:100%}.onboard-style .segmented button{white-space:normal;text-align:center}}

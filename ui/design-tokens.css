@@ -1,0 +1,2 @@
+/* Shared by the main website and the voice workspace. */
+:root{--paper:#f7f8fa;--line:#e8ebf0;--ink:#121c2b;--muted:#5d6978;--blue:#1f5fae;--mono:var(--sans);--radius:8px;--soft-blue:#edf3fb;--shadow:0 1px 2px #121c2b0a;--mission-blue-deep:#1a528f;--control-line:#dfe3ea;--notice-tint:#f0f4f8;--urgent-text:#a92a20;--urgent-tint:#fdecea;--review-text:#7d4e14;--review-tint:#fdf3e3;--review-line:#f0d9b5;--clear-text:#1b5e50;--clear-tint:#e7f4f0;--response-red:#9e433b;--response-line:#dfc4c0;--deep-orbit-navy:#0e213c;--toast-navy:#101d32}

@@ -1,0 +1,104 @@
+{
+ "note": "Synthetic seed pins, copied from src/modules/anatomy/mocks/pins.ts. Saved changes go to data/runtime/anatomy-pins.json.",
+ "pins": [
+  {
+   "id": "p12",
+   "crewId": "c03",
+   "regionId": "knee_left",
+   "type": "symptom",
+   "title": "Left knee pain on load",
+   "severity": "critical",
+   "status": "open",
+   "onsetAt": "2026-11-14T07:40:00Z",
+   "createdAt": "2026-11-14T08:02:00Z",
+   "updatedAt": "2026-11-14T11:26:00Z",
+   "authorId": "c02",
+   "note": "Sharp pain at the front of the knee during the squat set on the resistance device. Stopped the session. Swelling not visible. Ice applied for 15 minutes.",
+   "linkedVitalKinds": [
+    "heart_rate"
+   ],
+   "position3d": {
+    "x": 0.1,
+    "y": 0.49,
+    "z": 0.058,
+    "nx": 0,
+    "ny": 0,
+    "nz": 1
+   }
+  },
+  {
+   "id": "p13",
+   "crewId": "c03",
+   "regionId": "forearm_right",
+   "type": "injury",
+   "title": "Abrasion, right forearm",
+   "severity": "caution",
+   "status": "monitoring",
+   "onsetAt": "2026-11-13T16:10:00Z",
+   "createdAt": "2026-11-13T16:25:00Z",
+   "updatedAt": "2026-11-14T06:50:00Z",
+   "authorId": "c03",
+   "note": "Scraped on a rack edge while moving stowage. Cleaned and dressed. Checking the dressing daily.",
+   "linkedVitalKinds": [
+    "skin_temp"
+   ],
+   "position3d": {
+    "x": -0.262,
+    "y": 0.98,
+    "z": 0.055,
+    "nx": 0,
+    "ny": 0,
+    "nz": 1
+   }
+  },
+  {
+   "id": "p07",
+   "crewId": "c02",
+   "regionId": "thorax",
+   "type": "symptom",
+   "title": "Chest tightness on exertion",
+   "severity": "caution",
+   "status": "open",
+   "onsetAt": "2026-11-14T05:15:00Z",
+   "createdAt": "2026-11-14T05:30:00Z",
+   "updatedAt": "2026-11-14T09:05:00Z",
+   "authorId": "c02",
+   "note": "Tightness during the treadmill session, eased within 5 minutes of rest. Logged heart rate and SpO2 afterwards.",
+   "linkedVitalKinds": [
+    "heart_rate",
+    "spo2"
+   ],
+   "position3d": {
+    "x": 0,
+    "y": 1.3,
+    "z": 0.13,
+    "nx": 0,
+    "ny": 0,
+    "nz": 1
+   }
+  },
+  {
+   "id": "p04",
+   "crewId": "c04",
+   "regionId": "hand_left",
+   "type": "observation",
+   "title": "Dry skin, hands",
+   "severity": "nominal",
+   "status": "resolved",
+   "onsetAt": "2026-11-09T12:00:00Z",
+   "createdAt": "2026-11-09T12:20:00Z",
+   "updatedAt": "2026-11-12T18:00:00Z",
+   "authorId": "c04",
+   "note": "Dry, cracked skin on the knuckles. Moisturiser twice a day. Resolved after three days.",
+   "linkedVitalKinds": [],
+   "position3d": {
+    "x": 0.275,
+    "y": 0.78,
+    "z": 0.056,
+    "nx": 0,
+    "ny": 0,
+    "nz": 1
+   }
+  }
+ ]
+}

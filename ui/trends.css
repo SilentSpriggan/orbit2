@@ -1,0 +1,19 @@
+/* Chart geometry follows its container; labels and markers keep their proportions. */
+.chart-card .chart-area { padding: 0; margin: 12px 24px 0; min-height: 0; }
+.chart-card .chart-plot { min-width: 0; height: 200px; }
+.chart-card.large-chart .chart-plot { height: 280px; }
+.chart-card .chart { display: block; width: 100%; height: 100%; overflow: hidden; }
+.chart-card .chart text { font: 12px var(--sans); fill: var(--muted); }
+.chart-card .chart .plot-line, .chart-card .chart circle { vector-effect: non-scaling-stroke; }
+.chart-card .chart-summary { padding: 16px 24px 8px; }
+.chart-card .chart-summary span, .chart-card .chart-summary .chart-average { font: 13px var(--sans); }
+.chart-card .chart-summary strong { font-size: 32px; line-height: 1.2; }
+.chart-card .chart-foot { flex-wrap: wrap; padding: 12px 24px 20px; font-size: 13px; }
+.chart-card .chart-foot-link { margin-left: auto; min-height: 44px; }
+.chart-time-note { margin: 4px 24px 0; font-size: 12px; color: var(--muted); }
+.chart-card .chart-tooltip { font: 12px var(--sans); max-width: calc(100% - 24px); padding: 8px 12px; }
+@media (max-width: 620px) {
+ .chart-card .chart-area { margin-left: 12px; margin-right: 12px; }
+ .chart-card .chart-foot { padding-left: 16px; padding-right: 16px; }
+ .chart-card .chart-foot-link { margin-left: 0; }
+}

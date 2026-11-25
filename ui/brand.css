@@ -1,0 +1,103 @@
+/* ORBIT brand: colours and accents taken from the ORBIT Crew Health System logo.
+   Navy #0f2345 (wordmark and planet), cyan #4eaecd (orbit ring and subtitle), and the blue between them. */
+:root {
+  --orbit-navy: #0f2345;
+  --orbit-navy-2: #16305a;
+  --orbit-blue: #1a5a8a;
+  --orbit-cyan: #4eaecd;
+  --orbit-cyan-ink: #1d7a9e;   /* cyan dark enough for small text on white */
+  --orbit-cyan-soft: #e6f4f9;
+  --orbit-ring: linear-gradient(90deg, var(--orbit-navy) 0%, var(--orbit-blue) 45%, var(--orbit-cyan) 100%);
+
+  --ink: var(--orbit-navy);
+  --navy: var(--orbit-navy);
+  --navy2: var(--orbit-navy-2);
+  --blue: var(--orbit-blue);
+  --mission-blue-deep: var(--orbit-navy);
+  --soft-blue: var(--orbit-cyan-soft);
+  --deep-orbit-navy: var(--orbit-navy);
+  --toast-navy: var(--orbit-navy);
+  --muted: #536579;
+  --line: #dce6ee;
+  --control-line: #c8d6e1;
+  --paper: #f3f7fa;
+}
+::selection { color: var(--orbit-navy); background: #c9e8f2; }
+input, textarea { caret-color: var(--orbit-cyan-ink); }
+:where(button, a, input, select, textarea, summary):focus-visible { outline-color: var(--orbit-cyan); }
+
+/* Logo in the sidebar */
+.sidebar .brand { display: block; padding: 6px 0 0; margin: 0 0 0 -2px; }
+.sidebar .brand-logo { display: block; width: 100%; max-width: 184px; height: auto; }
+/* The nav sits lower, using the space freed below the logo */
+.sidebar .main-nav { margin-top: 30px; }
+
+/* Navigation: the active tab gets the orbit cyan */
+.main-nav a.active { background: var(--orbit-cyan-soft); box-shadow: inset 3px 0 var(--orbit-cyan); }
+.main-nav a.active .nav-copy strong { color: var(--orbit-navy); }
+.main-nav a.active > i { color: var(--orbit-cyan-ink); }
+.main-nav a:not(.active):hover { background: #edf4f8; }
+
+
+/* Headings and labels */
+.page-heading h1 { color: var(--orbit-navy); }
+.page-heading .eyebrow, .eyebrow { color: var(--orbit-cyan-ink); }
+
+/* Primary actions follow the logo's navy-to-blue sweep */
+.button.primary { background: linear-gradient(135deg, var(--orbit-blue), var(--orbit-navy)); border-color: var(--orbit-navy); }
+.button.primary:hover:not(:disabled) { background: linear-gradient(135deg, #1f6a9f, var(--orbit-navy-2)); border-color: var(--orbit-navy-2); }
+#assistant-panel .companion-mic { background: linear-gradient(135deg, var(--orbit-blue), var(--orbit-navy)); }
+#assistant-panel .companion-personas input:checked + span { color: var(--orbit-navy); box-shadow: inset 0 -2px var(--orbit-cyan), 0 1px 4px #0f234514; }
+.text-button, .instruction-link { color: var(--orbit-blue); }
+
+/* Tab change: old page slides out to the right, new page slides in from the left */
+::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+::view-transition-group(orbit-page) { animation-duration: .22s; }
+::view-transition-old(orbit-page) { animation: orbit-page-out .14s cubic-bezier(.4, 0, 1, 1) both; }
+::view-transition-new(orbit-page) { animation: orbit-page-in .22s cubic-bezier(.16, 1, .3, 1) .05s both; }
+@keyframes orbit-page-out { to { opacity: 0; transform: translateX(36px); } }
+@keyframes orbit-page-in { from { opacity: 0; transform: translateX(-36px); } }
+/* Browsers without view transitions: the new page still slides in from the left */
+#main.page-enter { animation: orbit-page-in .22s cubic-bezier(.16, 1, .3, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(orbit-page), ::view-transition-new(orbit-page), #main.page-enter { animation: none; }
+}
+
+/* Assistant panel spacing: avatar lower, then name and controls, toggle, and Connect text, evenly spaced */
+#assistant-panel .companion-head { padding-top: 68px; row-gap: 18px; }
+#assistant-panel .companion-avatar-choice { margin-top: 4px; }
+#assistant-panel .companion-connect { padding: 22px 0 12px; }
+#assistant-panel .assistant-empty { padding-top: 0; }
+#assistant-panel .assistant-transcript { padding-top: 0; }
+#assistant-panel .assistant-empty .companion-suggestions { margin-top: 0; }
+
+/* Buttons and headings use title case: every word starts with a capital.
+   Descriptions inside buttons (small print, paragraphs) keep their normal case. */
+h1, h2, h3, h4, h5, h6, button, .button, summary, [role=tab], legend, .main-nav a .nav-copy strong, a.text-button, a.cl-open, #header-page { text-transform: capitalize; }
+:is(button, .button, summary, [role=tab], a.text-button) :is(small, p, .small-sub) { text-transform: none; }
+
+/* Crew member picker at the top of Workspace settings */
+.settings-crew { display: grid; gap: 10px; }
+.settings-crew .field { display: grid; gap: 8px; }
+.settings-crew .text-button { justify-self: start; font-size: 12px; }
+.settings-viewer { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: #f7fafc; }
+.settings-viewer > div { display: grid; gap: 2px; }
+.settings-viewer span { font-size: 12px; color: var(--muted); }
+.settings-viewer strong { font-size: 14px; color: var(--ink); }
+.settings-viewer small { font-size: 11px; color: var(--muted); }
+
+/* A faint "SI" mark set like a trademark at the logo's top-right corner: easy to miss, there if you look.
+   It follows the logo, so it never runs past the sidebar edge at any width. */
+.sidebar .brand { display: flex; align-items: flex-start; gap: 1px; }
+.sidebar .brand-logo { min-width: 0; flex: 0 1 auto; max-width: min(184px, calc(100% - 9px)); }
+.si-mark { flex: none; margin-top: 12px; font: 600 6px/1 var(--sans); letter-spacing: .06em; color: #000; opacity: .75; pointer-events: none; user-select: none; text-transform: none; }
+
+/* The feature search stays available to the crew assistant ("find a feature") and the ⌘K / Ctrl K shortcut, but its top bar button is hidden. */
+.topbar .feature-finder-trigger { display: none !important; }
+
+/* Desktop: no top bar (the sidebar is always visible, so no menu button is needed).
+   Tablets and phones keep the bar for the menu button. */
+@media (min-width: 1100px) {
+  .topbar { display: none; }
+  .topbar > * { display: none !important; }
+}
